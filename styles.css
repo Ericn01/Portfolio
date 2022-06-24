@@ -1,0 +1,125 @@
+/*
+Import for the font that my portfolio will use.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root{
+    --head-background: #145da0;
+    --nav-background:#0C2D48;
+    --background: #2E8BC0;
+    --baby-blue: #B1D4E0;
+    --text: #f3f6fb;
+}
+
+body{
+    border: 3px dotted red;
+    font-family: 'Open Sans', sans-serif;
+    margin: none;
+    border: none;
+    padding: none;
+    color: var(--text);
+    background-color: var(--background);
+}
+header{
+    display: flex;
+    flex-basis: 1fr 3fr;
+    justify-content: start;
+    align-items:center;
+    background-color: var(--head-background);
+    height: 4.5rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    width: 800px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul li{
+    margin: 5px 20px 5px 20px;
+    background-color: var(--nav-background);
+    
+    list-style-type: none;
+    color: white;
+}
+
+h2{
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 2px 2px black;
+}
+
+h2:hover{
+    transition: 2s ease-in;
+    transform: scale(1.1);
+    color: orange;
+    text-shadow: 3px 3px solid black;
+}
+.grid-item{
+    padding: 2rem;
+    height: 5rem;
+    border: 2px solid black;
+}
+
+/*
+Body Section
+*/
+h3{
+    text-shadow: 1px 1px black;
+    align-content: center;
+}
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 6fr 2fr; 
+}
+.my-picture{
+    background: linear-gradient(#007882, #fafa6e);
+    height: 100%;
+    margin: 20px 20px 0px 0px;
+}
+
+.intro{
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--nav-background);
+    padding: 30px;
+    margin: 20px 5px 20px 5px;
+    box-shadow: 2px 2px black;
+    height: 100%;
+}
+.intro:hover{
+    transition: 0.8s;
+    background-color: #185ba0;
+    transform: scale(1.05);
+}
+
+.my-work{
+    border: 1px solid orange;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+.my-image{
+    height: 550px;
+    object-fit: cover;
+}
+
+.my-image:hover{
+    transition: 1.5s ease-out;
+    transform:rotate(360deg);
+    opacity: 0%;
+}
+
+.contact-info ul li{
+    margin: 10px;
+
+}
