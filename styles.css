@@ -4,22 +4,28 @@ Import for the font that my portfolio will use.
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 :root{
-    --head-background: #145da0;
-    --nav-background:#0C2D48;
-    --background: #2E8BC0;
-    --baby-blue: #B1D4E0;
+    --head-background: #e76f51;
+    --nav-background:#2a9d8f;
+    --background: #023047;/*#2E8BC0*/
+    --alt-background: #f4a261;
     --text: #f3f6fb;
 }
-
+/* Paragraph text styling*/
+p{
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/* Whole page styling */ 
 body{
-    border: 3px dotted red;
     font-family: 'Open Sans', sans-serif;
-    margin: none;
+    margin: 3rem 5rem;
     border: none;
     padding: none;
     color: var(--text);
     background-color: var(--background);
 }
+/* Header section styles */
 header{
     align-items: stretch;
     display: flex;
@@ -27,8 +33,9 @@ header{
     justify-content: space-between;
     align-items:center;
     background-color: var(--head-background);
-    height: 5rem;
+    height: 10rem;
 }
+/* Links need styling as well!*/
 a{
     color: white;
     text-decoration: none;
@@ -36,38 +43,49 @@ a{
 ul{
     text-align: center;
     display: flex;
-    align-items: stretch;
-
+    align-items: flex-start;
 }
 
 nav{
     flex-grow: 1;
-    border: 2px dotted black;
     padding-right: 1rem;
     padding-left: 1rem;
     margin-right: 1.5rem;
 }
 
+nav ul{
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 1.75rem;
+}
+
+nav li{
+    padding: 0.5rem;
+}
+nav li:hover{
+    transition: 0.5s ease-in;
+    background: rgba(0, 20, 20, 0.2);
+}
+
+
 ul li{
     margin: 5px 20px 5px 20px;
-    background-color: var(--nav-background);
     list-style-type: none;
     color: white;
 }
 
 h2{
+    letter-spacing: 2px;
     flex-grow: 2;
     margin-left: 1rem;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 900;
-    text-shadow: 2px 2px black;
+    text-shadow: 0.8px 1px black;
 }
 
 h2:hover{
-    transition: 1s ease-in;
-    transform: scale(1.1);
-    color: orange;
-    text-shadow: 3px 3px solid black;
+    transition: 1s;
+    transform:rotate(-5deg);
 }
 .grid-item{
     padding: 1rem;
@@ -90,20 +108,12 @@ h3{
     grid-template-rows: 1fr 1fr; 
 }
 .my-picture{
-    font-size: 2.5rem;
-    font-style: italic;
-    font-weight: bolder;
-    text-shadow: 2px 2.5px black;
     text-align: center;
-    background: linear-gradient(#007882, #fafa6e);
     text-align: center;
     margin: 20px 5px 20px 5px;
 }
 
 .intro{
-    letter-spacing: 1.5px;
-    font-size: 1.2rem;
-    font-weight: bold;
     background-color: var(--nav-background);
     padding: 30px;
     margin: 20px 5px 20px 5px;
@@ -116,9 +126,14 @@ h3{
 }
 
 .my-work{
-    border: 1px solid orange;
+    text-align: center;
+    background-color: var(--nav-background);
+    box-shadow: 3px 2px black;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
+}
+.my-work, .about-me, .contact-info{
+    grid-column: span 2;
 }
 .my-image{
     object-fit: cover;
@@ -130,13 +145,18 @@ h3{
     opacity: 0%;
 }
 
+.about-me{
+    background-color: var(--alt-background);
+}
+.contact-info{
+    background-color: var(--nav-background);
+}
 .contact-info ul li{
     margin: 10px;
-
 }
+
 a:hover{
     font-weight: bolder;
     text-decoration: underline;
     text-shadow: 1px 1px black;
-    
 }
