@@ -14,134 +14,51 @@
     <script src="index.js"></script> 
 </head>
 <body>
-    <header id="top">
-        <h2> Eric Nielsen </h2>
-        <nav class="links">
-            <ul>
-                <li>
-                    <a href="#my-work" target="_self"> Past Projects </a>
-                </li>
-                <li>
-                    <a href="#about-me" target="_self"> About me</a>
-                </li>
-                <li> 
-                    <a href="https://resume-2511.herokuapp.com/"> Resume </a>
-                </li>
-                <li>
-                    <a href="contact-info" target="_self"> Contact Me </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <section class="container">
-        <article class="grid-item intro"> 
-            <h3> Introduction </h3> 
-            <p>
-                Hello there! 
-                My name is Eric Nielsen, and I am currently a second year Computer Information Systems
-                student at <a href="https://www.mtroyal.ca/"> Mount Royal University</a>. My areas of study include 
-                Object Oriented Programming in Java, relational databases with SQL, web design, and business fundamentals. </p>
-            <p> In terms of programming tastes, I have a particular interest in data analysis, and web development. Robotics is an area that interests me, and that I'd like to explore in the future.</p>
-            
-            <p> With all of that said, I'm glad you're here! Don't 
-            be shy, look around!</p>
-        </article>
-        <aside class="grid-item my-picture"> 
-            <img class="my-image" src="images/main.png" alt="picture of me!"/>
-        </aside> 
-        <!-- Always keep 4 elements at a time. Build cool projects, show the four most important ones-->
-        <section class="grid-item my-work"> 
-            <!-- I kinda wanna make these as cards that come at you while you hover over them-->
-            <section class="item project1"> 
-                <h3 id="my-work"> Alberta COVID-19 Data Analyser </h3>
-
-                <p> Written in: </p>
-                <ol>
-                    <li> Java</li>
-                </ol>
-                <p><a href="https://github.com/Ericn01/Covid19-alberta-stats-analysis">Project Link </a></p>
-            </section>
-            <section class="item project2"> 
-                <h3> Worldwide City Lookup </h3>
-                <p> Written in: </p>
-            </ol>
-                <li> Java</li>
-            </ol>
-                <p><a href="https://github.com/Ericn01/City-Population-Analysis">Project Link </a></p>
-            </section>
-            <section class="item project3"> 
-                <h3> The Chimpanzee Foundation Website </h3> 
-                <p> Written in: </p>
-            </ol>
-                <li>HTML (69%)</li>
-                <li>CSS (31%) </li>
-            </ol>
-                <p> <a href="https://comp2511-assignment-2.herokuapp.com/home.html">Website Link</a></p>
-            </section>
-            <section class="item project4"> 
-                <h3> BMI Calculator Website </h3>
-                <p> Written in: </p>
-            </ol>
-                <li> HTML (80%) </li>
-                <li> CSS (13%) </li>
-                <li> JavaScript (7%) </li> 
-            </ol>
-            <p> 
-                This website was mostly made for fun, and to practice the absolute basics of Javascript. Users can input their bodyweight and height, and then their Body Mass index (BMI) is returned.
-            </p>
-                <p> <a href="https://github.com/Ericn01/BMI-Calculator-Website-main"> Project Link </a> </p>
-            </section>
-        </section>
-        <!-- Just like 3-4 important/cool things about me. This part is real just to show who I am. Gotta have some fun with it :-) -->
-        <section class="grid-item about-me">
-            <article id="about-me"> 
-                <h3> Athlete </h3>
-                <p> When it comes to fitness, I'm 110% in love! 
-                Whether it be multi-year commitment to the gym, going at least 4 times a week,
-                my love for running (shocki When it comes to fitness, I'm 110% in love! Whether it be multi-year commitment to the gym, going at least 4 times a week, my love for running (shocking I know), my consistent training of Brazilian Jiu Jitsu, or even just the hikes that I do in the rockies, fitness is an integral part of my life. On any given day, you're likely to find me at your local gym's squat rack, on the roads running away, or at the BJJ mats getting the air choked out of me. My first BJJ competition will be on July 15th! Check out my fitness related YouTube channel Fitness facts about me: 
-                On any given day, you're likely to find me at your local gym's squat rack, on the roads running away, or at the BJJ mats getting the life choked out of me.
-                My first BJJ competition will be on July 15th! </p>
-
-                <p> Check out my fitness related <a href="https://www.youtube.com/channel/UC-QyV31ULKDB0dOdo-ioDxg">YouTube channel</a>  
-                    Fitness facts about me:
-                </p>
-                <ol>
-                    <li> My fastest 3000m ever was ran in 11 minutes and 9 seconds.</li>
-                    <li> I'm currently a Brazilian Jiu Jitsu white belt (No stripes yet). I currently train at Affinity Academy. </li>
-                    <li> I once decided to walk a marathon for no particular reason </li>
-                    <li> Deadlift Personal Best: 545lbs x 2</li>
-                    <li> Bench Press Personal Best: 315lbs x 4</li>
-                    <li> Squat Personal Best: 425lbs x 1</li> 
-                </ol>
-            </article>
-            <article>
-                <h3> Student </h3>
-
-                <p> On my hierarchy of important things in life, I place my academics quite highly</p> 
-                
+    <section class="flex-container">
+        <aside class="personal-intro">
+            <div class="action-image"> 
+                <img class="my-image" src="images/cover-image.jpg" alt="picture of me!"/>
+            </div>
+            <div class="additional-info">
+                <h1 class="name"> Eric Nielsen </h1>
+                <h3> 
+                    Web Development | Data Analytics | Adventure
+                </h3>
+                <p class="details"> I'm a hard working and disciplined student that is currently growing his skills in web development. I have experience in Object Oriented Programming with Java, and have experience in Software Development. I have a particular interest in data analysis and web development. Above all else I am a proficient problem solver and team player. </p>
+            </div>
+            <div class="skills-tags"> 
+                <div class="tag react"> React  <progress value="70" max="100"> 85% </progress></div>
+                <div class="tag node"> NodeJS  <progress value="75" max"100"> 75% </progress></div>
+                <div class="tag java"> Java <progress value="80: max="100"> 80% </progress></div>
+                <div class="tag bash"> Bash Scripting 
+                    <progress value=55 max="100"> 55% </progress>
+                </div>
+                <div class="tag"> </div>
+            </div>
+            <nav class="links">
                 <ul>
+                    <li>
+                        <a href="#about-me" target="_self"> About </a>
+                    </li>
 
-                    <li> </li>
+                    <li> 
+                        <a href="https://resume-2511.herokuapp.com/"> Resume </a>
+                    </li>
+                    <li>
+                        <a href="contact-info" target="_self"> Contact</a>
+                    </li>
                 </ul>
-            </article>
-            <article>
-                <h3> Hobbies </h3>
-                Some 
-            </article>
+            </nav>
+        </aside>
+        <section class="work-elements"> 
+            <div class="project city-retriever">
+                <img >
+            </div>
+            <div class="project "></div>
+            <div class="project "></div>
+            <div class="project "></div>
+            <div class="project "></div>
+            <div class="project "></div>
         </section>
-        <section class="grid-item contact-info">
-            <h3 id="contact-info"> Contact Information </h3>
-            <ul>
-                <li> <img src="images/linkedin.png" alt="LinkedIn Logo" height=32px/> <a href="https://www.linkedin.com/in/eric-nielsen-37a361221/"> LinkedIn Account </a></li>
-                <li> <img src="images/GitHub-Mark-32px.png" alt="Github logo"/><a href="https://github.com/Ericn01"> Github Account </a></li>
-                <li><img src="images/gmail.png" alt="gmail logo" height=32px/> <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqVNzxrZrZTqkPTzQkTNzglqbxPWzsfQXJnRrQtnKWnnCbMdtFpngHpxwGQmlqxVlBnFlB">Gmail</a></li>
-                <li> <img src="images/telephone.png" alt="phone" height=32px> <a href="tel:4034046160"> Call me at (403)-404-6160 </a> </li>
-            </ul>
-        </section>  
-    </section>
-    <footer> 
-        <p> Thank you for visiting my website! If you have any recommendations, feel free to contact me. </p>
-        <a href="#top" target="_self">Back to the top of the page </a>
-    </footer>
 </body>
 </html>

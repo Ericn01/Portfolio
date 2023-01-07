@@ -1,112 +1,70 @@
 /*
 Import for the font that my portfolio will use.
 */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 :root{
     --head-background: #e76f51;
     --nav-background:#2a9d8f;
-    --background: #023047;/*#2E8BC0*/
+    --background: #fefefe;/*#2E8BC0*/
     --alt-background: #f4a261;
-    --text: #f3f6fb;
+    --text: #010101;
 }
-/* Paragraph text styling*/
-p{
-    letter-spacing: 1.5px;
-    font-size: 1.2rem;
-    font-weight: bold;
+.flex-container{
+    display: flex;
+    column-gap: 50px;
+    flex-basis: 30% 70%;
+    flex-grow: 1 3;
 }
+
+.my-image{
+    border: 1px solid black;
+    width: 300px;
+    min-width: 100px;
+    border-radius: 20%;
+}
+
+.name{
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.personal-intro{
+    max-width: 30%;
+}
+
 /* Whole page styling */ 
+
 body{
-    font-family: 'Open Sans', sans-serif;
-    margin: 3rem 5rem;
+    font-family: 'Inter', sans-serif;
+    margin: 2rem 5rem;
     border: none;
     padding: none;
     color: var(--text);
     background-color: var(--background);
 }
-/* Header section styles */
-header{
-    align-items: stretch;
-    display: flex;
-    flex-basis: 2fr 1fr;
-    justify-content: space-between;
-    align-items:center;
-    background-color: var(--head-background);
-    height: 10rem;
-}
-/* Links need styling as well!*/
-a{
-    color: white;
-    text-decoration: none;
-}
-ul{
-    text-align: center;
-    display: flex;
-    align-items: flex-start;
-}
 
-nav{
-    flex-grow: 1;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: 1.5rem;
-}
-
-nav ul{
-    justify-content: flex-end;
-    height: 100%;
-    font-size: 1.75rem;
-}
-
-nav li{
-    padding: 0.5rem;
-}
-nav li:hover{
-    transition: 0.5s ease-in;
-    background: rgba(0, 20, 20, 0.2);
-}
-
-
-ul li{
-    margin: 5px 20px 5px 20px;
-    list-style-type: none;
-    color: white;
-}
-
-h2{
-    letter-spacing: 2px;
-    flex-grow: 2;
-    margin-left: 1rem;
-    font-size: 4.5rem;
-    font-weight: 900;
-    text-shadow: 0.8px 1px black;
-}
-
-h2:hover{
-    transition: 1s;
-    transform:rotate(-5deg);
-}
-.grid-item{
-    padding: 1rem;
-    border: 2px solid black;
-}
-
-/*
-Body Section
-*/
 h3{
-    font-size: 2rem;
-    text-decoration: underline 2px;
-    text-shadow: 1px 1px black;
-    align-content: center;
+    font-size: 1rem;
 }
-.container{
+
+p{
+    font-size: 1rem;
+}
+
+.work-elements{
+    width: 100%;
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr; 
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+.project{
+    padding: 20px;
+    border: 1px solid black;
+    background-color: red;
+}
+
 .my-picture{
     text-align: center;
     text-align: center;
@@ -134,15 +92,6 @@ h3{
 }
 .my-work, .about-me, .contact-info{
     grid-column: span 2;
-}
-.my-image{
-    object-fit: cover;
-}
-
-.my-image:hover{
-    transition: 1.5s ease-out;
-    transform:rotate(360deg);
-    opacity: 0%;
 }
 
 .about-me{
