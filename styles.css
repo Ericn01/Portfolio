@@ -97,9 +97,11 @@ progress{
 #java-progress{
     accent-color: #6e0101;
 }
-
+#bash-progress{
+    accent-color: lightgreen;
+}
 #regex-progress{
-    
+    accent-color: orangered;
 }
 
 

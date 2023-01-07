@@ -17,7 +17,7 @@
     <section class="flex-container">
         <aside class="personal-intro">
             <div class="action-image"> 
-                <img class="my-image" src="images/cover-image.jpg" alt="picture of me!"/>
+                <img class="my-image" src="images/cover-image.jpg" alt="picture of me!" draggable="false"/>
             </div>
             <div class="additional-info">
                 <h1 class="name"> Eric Nielsen </h1>
@@ -32,12 +32,12 @@
                 </p>
             </div>
             <div class="skills-tags"> 
-                <div class="tag react"> React  <progress value="70" max="100"> 85% </progress></div>
-                <div class="tag node"> NodeJS  <progress value="75" max="100"> 75% </progress></div>
-                <div class="tag java"> Java <progress value="80" max="100"> 80% </progress></div>
-                <div class="tag regex"> Regex <progress value="70" max="100"> 70%</progress></div>
+                <div class="tag react"> React  <progress value="85" max="100" id="react-progress"> 85% </progress></div>
+                <div class="tag node"> NodeJS  <progress value="75" max="100" id="node-progress"> 75% </progress></div>
+                <div class="tag java"> Java <progress value="80" max="100" id="java-progress"> 80% </progress></div>
+                <div class="tag regex"> Regular Expressions <progress value="70" max="100" id="regex-progress"> 70%</progress></div>
                 <div class="tag bash"> Bash Scripting 
-                    <progress value=55 max="100"> 55% </progress>
+                    <progress value=55 max="100" id="bash-progress"> 55% </progress>
                 </div>
                 
             </div>
@@ -61,13 +61,13 @@
         </aside>
         <section class="work-elements"> 
             <div class="project city-retriever">
-                <img src="images/project-bg//city-retriever-project.jpg" alt="" class="project-bg">
+                <h2 class="bg-text text-one"> City Retriever Website </h2>
             </div>
             <div class="project js-songs-app">
-                <img src="images/project-bg/songs-project.jpg" alt="" class="project-bg">
+                <h2 class="bg-text text-two"> Song Data Website </h2>
             </div>
             <div class="project covid-java">
-                <img src="images/project-bg/covid-project.jpg" alt="" class="project-bg">
+                <h2 class="bg-text text-three"> COVID-19 Alberta Data Analyser </h2>
             </div>
             <div class="project proj-four">
             </div>
