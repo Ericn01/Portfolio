@@ -19,18 +19,23 @@ Import for the font that my portfolio will use.
 
 .my-image{
     border: 1px solid black;
-    width: 300px;
+    width: 325px;
     min-width: 100px;
-    border-radius: 20%;
+    padding: 0px;
 }
 
-.name{
+.project-text{
+    text-align: center;
+    color: white;
     font-size: 2rem;
+}
+.name{
+    font-size: 2.3rem;
     font-weight: bolder;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 .personal-intro{
-    max-width: 30%;
+    max-width: 25%;
 }
 
 /* Whole page styling */ 
@@ -51,57 +56,52 @@ h3{
 p{
     font-size: 1rem;
 }
-
-.work-elements{
+.project-bg{
+    opacity: 0.3;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ul{
+    list-style-type: none;   
+}
+.tag{
+    margin: 10px 0px;
+}
+.other-links li{
+    padding: 2px 0px;
+    margin: 10px 0px;
+}
+.work-elements{
+    width: 90%;
     display: grid;
-    gap: 10px;
+    gap: 12.5px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project{
-    padding: 20px;
     border: 1px solid black;
-    background-color: red;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    max-height: 450px;
 }
+.city-retriever{
+    background-color: #CBBAED;
+}
+.js-songs-app{
+    background-color: #38E4AE;
+}
+.covid-java{
+    background-color: #FEEA00;
+}
+.proj-four{
+    background-color: #C33149;
+}
+.tag progress{
+    float: right;
 
-.my-picture{
-    text-align: center;
-    text-align: center;
-    margin: 20px 5px 20px 5px;
-}
-
-.intro{
-    background-color: var(--nav-background);
-    padding: 30px;
-    margin: 20px 5px 20px 5px;
-    box-shadow: 2px 2px black;
-}
-.intro:hover{
-    transition: 0.8s;
-    background-color: #185ba0;
-    transform: scale(1.05);
-}
-
-.my-work{
-    text-align: center;
-    background-color: var(--nav-background);
-    box-shadow: 3px 2px black;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-}
-.my-work, .about-me, .contact-info{
-    grid-column: span 2;
-}
-
-.about-me{
-    background-color: var(--alt-background);
-}
-.contact-info{
-    background-color: var(--nav-background);
-}
-.contact-info ul li{
-    margin: 10px;
 }
 
 a:hover{
