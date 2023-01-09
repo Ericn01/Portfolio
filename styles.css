@@ -129,7 +129,8 @@ progress{
 }
 .skill-container{
     display: none;
-    margin: 0px auto;
+    margin: 8px auto;
+    text-align: center;
 }
 .project-link{
     color: white;
@@ -212,7 +213,9 @@ progress{
     width: 40px;
 }
 
-
+.mobile-only{
+    display: none;
+}
 /* Media queries for responsive design */
 
 @media (max-width: 1440px) {
@@ -228,4 +231,43 @@ progress{
     .regex{
         display: none;
     }
+}
+
+@media (max-width: 600px){
+    body{
+        margin: 1rem;
+    }
+    .action-image{
+        max-width: 90%;
+    }
+    .flex-container{
+        display: block;
+    }
+    .personal-intro{
+        max-width: 100%;
+    }
+    .bg-text{
+        font-size: 1rem;
+    }
+    .work-elements{
+        gap: 7.5px;
+    }
+    .project{
+        min-height: 185px;
+        text-align: center;
+    }
+    .social-links{
+        display: none;
+    }
+    .mobile-only{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 20px;
+    }
+}
+@media (max-width: 380px){
+    .action-image{
+        max-width: 70%;
+    }
+
 }
