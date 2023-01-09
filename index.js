@@ -27,5 +27,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     /* Work Showcase Divs Dynamic anchor - this removes the need forredundant anchor tags */
     const projectDivs = document.querySelectorAll(".project");
-    projectDivs.forEach( (project) => project.addEventListener('click', () => window.open("other-pages/projects.html", "__self")));
+    projectDivs.forEach( (project) => project.addEventListener('click', () => window.open("other-pages/projects.html", "_self")));
 })

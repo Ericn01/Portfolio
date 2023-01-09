@@ -152,6 +152,7 @@ progress{
     color: white;
     background-blend-mode: multiply;
     opacity: 0.85;
+    text-align: center;
 }
 .project:hover{
     box-shadow: 2px 2px 5px black;
@@ -232,8 +233,24 @@ progress{
         display: none;
     }
 }
+@media (max-width: 1100px){
+    body{
+        margin: 2rem;
+    }
+    .personal-intro{}
+    .work-elements{
+        display: block;
+    }
+    .project{
+        min-height: 25%;
+        margin-top: 10px;
+    }
+    .project:first-child{
+        margin-top: 0px;
+    }
+}
 
-@media (max-width: 600px){
+@media (max-width: 650px){
     body{
         margin: 1rem;
     }
@@ -250,19 +267,34 @@ progress{
         font-size: 1rem;
     }
     .work-elements{
+        display: grid;
         gap: 7.5px;
     }
     .project{
         min-height: 185px;
-        text-align: center;
+        margin-top: 0px;
+    }
+    .mobile-only h3{
+        margin: 0px;
     }
     .social-links{
         display: none;
     }
     .mobile-only{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+    }
+    .skills-tags{
+        justify-content: start;
+    }
+    .tag{
+        margin-right: 1.5rem;
+    }
+    .links{
         margin: 15px 20px;
+    }
+    #bottom-division-mobile{
+        margin-top: 20px;
     }
 }
 @media (max-width: 380px){
