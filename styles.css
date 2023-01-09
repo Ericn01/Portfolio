@@ -79,11 +79,6 @@ ul{
     overflow: hidden;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-/* Progress bars styling */
-progress{
-    height: 27.5px;
-}
-
 .node:hover{
     background-color: #68A063;
 }
@@ -98,10 +93,6 @@ progress{
 }
 .regex:hover{
     background-color: lightsalmon;
-}
-
-.project-showcase{
-    display: grid;
 }
 
 .skills-tags{
@@ -125,11 +116,12 @@ progress{
 #skill-bar{
     margin: 0px 10px;
     width: 50%;
-    height: 32px;
+    height: 27.5px;
 }
 .skill-container{
     display: none;
     margin: 8px auto;
+    vertical-align: middle;
     text-align: center;
 }
 .project-link{
@@ -296,4 +288,19 @@ progress{
     .action-image{
         max-width: 70%;
     }
+}
+/* Projects page styling */
+.project-showcase{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 40px;
+}
+.project-header{
+    grid-column: span 2;
+    font-size: 1.8rem;
+    font-style: italic;
+    border-bottom: 1px dotted black;
+}
+video{
+    border: 2px solid black;
 }
