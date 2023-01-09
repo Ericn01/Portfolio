@@ -88,22 +88,47 @@ progress{
     height: 27.5px;
 }
 
-#node-progress{
-    accent-color: #68A063;
+.node:hover{
+    background-color: #68A063;
 }
-#react-progress{
-    accent-color: #61DBFB;
+.react:hover{
+    background-color: #61DBFB;
 }
-#java-progress{
-    accent-color: #6e0101;
+.java:hover{
+    background-color: #6e0101;
 }
-#bash-progress{
-    accent-color: lightgreen;
+.bash:hover{
+    background-color: lightgreen;
 }
-#regex-progress{
-    accent-color: orangered;
+.regex:hover{
+    background-color: orangered;
 }
 
+.project-showcase{
+    display: grid;
+
+}
+
+.skills-tags{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.tag{
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 15px;
+    box-shadow: #422800 1.5px 1.5px 0 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px 8px;
+}
+
+.skill-progress-container{
+
+}
 
 /* Background images styling */
 .project { 
