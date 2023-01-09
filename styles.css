@@ -71,9 +71,6 @@ p{
 ul{
     list-style-type: none;   
 }
-.tag{
-    margin: 10px 0px;
-}
 .work-elements{
     display: grid;
     margin: 0px;
@@ -96,11 +93,11 @@ progress{
 .java:hover{
     background-color: red;
 }
-.bash:hover{
-    background-color: lightgreen;
+.sql:hover{    
+    background-color: violet;
 }
 .regex:hover{
-    background-color: orangered;
+    background-color: lightsalmon;
 }
 
 .project-showcase{
@@ -115,12 +112,14 @@ progress{
 .tag{
     font-size: 0.8rem;
     font-weight: bold;
-    background-color: #fbeee0;
+    background-color: #f0f0f0;
     border: 2px solid #422800;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     box-shadow: #422800 1.5px 1.5px 0 0;
     text-align: center;
     padding: 3px 8px;
+    margin: 10px 0px;
+
 }
 
 #skill-bar{
@@ -211,4 +210,22 @@ progress{
 
 #resume{
     width: 40px;
+}
+
+
+/* Media queries for responsive design */
+
+@media (max-width: 1440px) {
+    body{
+       margin: 2rem 4rem; 
+    }    
+    .personal-intro{
+        max-width: 30%;
+    }
+    .optional{
+        display: none;
+    }
+    .regex{
+        display: none;
+    }
 }
