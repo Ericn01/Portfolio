@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function styleProgressBar(value, color){
         skillBar.value = value;
         skillBar.style.accentColor = color;
-        skillBar.style.display = "block";
+        document.querySelector(".skill-container").style.display = "block";
     }
 })

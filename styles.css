@@ -130,9 +130,15 @@ progress{
 
 #skill-bar{
     width: 75%;
+    height: 30px;
+}
+.skill-container{
     display: none;
 }
-
+a{
+    color: white;
+    text-decoration: none;
+}
 /* Background images styling */
 .project { 
     border: 1px solid black;
