@@ -199,16 +199,6 @@ progress{
     text-shadow: 1px 1px 2px black;
     font-size: 2rem;
 }
-.tag progress{
-    float: right;
-
-}
-
-.other-links a:hover{
-    font-weight: bolder;
-    text-decoration: underline;
-    text-shadow: 1px 1px black;
-}
 
 #resume{
     width: 40px;
@@ -219,6 +209,7 @@ progress{
 }
 /* Media queries for responsive design */
 
+/* Laptops, smaller monitors */
 @media (max-width: 1440px) {
     body{
        margin: 2rem 4rem; 
@@ -233,11 +224,14 @@ progress{
         display: none;
     }
 }
+/* Some laptops and most tablets */
 @media (max-width: 1100px){
     body{
         margin: 2rem;
     }
-    .personal-intro{}
+    .personal-intro{
+        max-width: 40%;
+    }
     .work-elements{
         display: block;
     }
@@ -249,7 +243,7 @@ progress{
         margin-top: 0px;
     }
 }
-
+/* Mobile device media queries*/
 @media (max-width: 650px){
     body{
         margin: 1rem;
@@ -297,9 +291,9 @@ progress{
         margin-top: 20px;
     }
 }
+/* Some phones */
 @media (max-width: 380px){
     .action-image{
         max-width: 70%;
     }
-
 }
