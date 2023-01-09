@@ -74,10 +74,6 @@ ul{
 .tag{
     margin: 10px 0px;
 }
-.other-links li{
-    padding: 2px 0px;
-    margin: 10px 0px;
-}
 .work-elements{
     display: grid;
     margin: 0px;
@@ -109,7 +105,6 @@ progress{
 
 .project-showcase{
     display: grid;
-
 }
 
 .skills-tags{
@@ -129,15 +124,20 @@ progress{
 }
 
 #skill-bar{
-    width: 75%;
-    height: 30px;
+    margin: 0px 10px;
+    width: 50%;
+    height: 32px;
 }
 .skill-container{
     display: none;
+    margin: 0px auto;
 }
-a{
+.project-link{
     color: white;
     text-decoration: none;
+}
+.project-link:hover{
+    text-shadow: .1em .1em 0 hsl(200 50% 30%);
 }
 /* Background images styling */
 .project { 
@@ -190,9 +190,9 @@ a{
     background-color: #FEEA00;
     background-image: url('images/project-bg/covid-project.jpg');
 }
-.proj-four{
-        background-color: #CBBAED;
-
+.react-project{
+    background-color: #CBBAED;
+    background-image: url('images/project-bg/next-project.jpg');
 }
 .bg-text{
     text-shadow: 1px 1px 2px black;
@@ -203,8 +203,12 @@ a{
 
 }
 
-a:hover{
+.other-links a:hover{
     font-weight: bolder;
     text-decoration: underline;
     text-shadow: 1px 1px black;
+}
+
+#resume{
+    width: 40px;
 }

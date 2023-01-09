@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     /* Progress bar display code (skills section) */
     const skillBar = document.querySelector("#skill-bar");
-    console.log(skillBar)
     const tags = document.querySelectorAll(".tag");
     // Adding an event listener to each tag 
     tags.forEach( (tag) => tag.addEventListener("mouseover", displayProgressBar) );
