@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tags.forEach( (tag) => tag.addEventListener("mouseenter", displayProgressBar) );
     // Tag values, represented as objects
     const tagObj = [  {"tName": "react", "value": 55, "color": "#61DBFB"}, 
-                      {"tName": "node", "value": 45, "color": "#68A063"}, 
-                      {"tName": "regex", "value": 35, "color": "orangered"},
-                      {"tName": "java", "value": 80, "color": "red"},
-                      {"tName": "sql", "value": 90, "color": "violet"},
+                        {"tName": "node", "value": 45, "color": "#68A063"}, 
+                        {"tName": "regex", "value": 35, "color": "orangered"},
+                        {"tName": "java", "value": 80, "color": "red"},
+                        {"tName": "sql", "value": 90, "color": "violet"},
                     ];
     function displayProgressBar() {
         const tagName = this.id // the ID of the tag that has been clicked
