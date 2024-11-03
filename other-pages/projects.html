@@ -4,118 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Showcase Page</title>
+    <title>Projects Showcase</title>
     <link rel="icon" href="../images/portfolio.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/projects-styles.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <script src="../index.js"></script> 
 </head>
 <body>
     <header> 
-        <h1> Projects Showcase </h1>
+        <h1> Projects </h1>
         <nav class="header-nav-bar"> 
             <ul class="links-container">
-                <li class="header-link"> <a href="../index.html"> Main Page </a> </li>
+                <li class="header-link"> <a href="../index.html"> Home Page </a> </li>
+                <li class="header-link"> <a href="projects.html"> <emph> Projects</emph> </a> </li>
                 <li class="header-link"> <a href="about-me.html"> About Me </a> </li>
             </ul>
         </nav>
     </header>
     <main class="projects-container">
-        <section class="project-showcase project-one">
-            <h1 class="project-header"> City Retriever | <a href="https://ericn01.github.io/City-Info-JS/"> Try It Out Yourself </a> </h1>
-            <div class="project-video"> 
-                <h2> Video 🎥 </h2>   
-                <video> </video> 
-            </div>
-            <div class="project-description"> 
-                <h2> Description 📰 </h2>
-                <p> Dynamic Javascript website that retrieves data asynchronously from over 10,000 cities across the world. The information that is displayed includes population data, weather data, current time, along with a short description of the location. 
-                </p>
-                <h4> API's Used </h4>
-                <ul> 
-                    <li> Google Maps 
-                        <ul> 
-                            <li> Places API </li>
-                            <li> Dynamic Map API </li>
-                        </ul>
-                    </li>
-                    <li> Wikipedia's PHP API </li>
-                    <li> OpenWeather API </li>
-                    <li> Chart.Js </li>
-                    <li> npoint.io </li>
-                </ul>
-            </div>
-            <div class="programming-languages"> 
-                <h2> Languages Used 📚</h2>
-                <div class="skills-tags technologies-used">              
-                    <div class="tag javascript" id="javascript"> JavaScript</div>
-                    <div class="tag css" id="css"> CSS </div>
-                    <div class="tag html" id="html"> HTML </div>
-                </div>   
-            </div>
-            <div class="reflection">
-                <h2> Learning </h2>
+        <section class="project-showcase">
+            <img src="../images/project-card-images/City Information Tool.png" alt="City Retriever preview" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title"> City Retriever</h2>
+                <a href="https://ericn01.github.io/City-Info-JS/" class="project-link">Try It Out Yourself</a>
+                <p class="video-link"><a href="path_to_video.mp4" target="_blank"> Watch Video 🎥</a></p>
+                
+                <div class="project-details">
+                    <h3>Description 📰</h3>
+                    <p>A dynamic JavaScript website that retrieves data asynchronously from over 10,000 cities worldwide. It displays population, weather, current time, and a location description.</p>
+                    <h4>APIs Used</h4>
+                    <ul>
+                        <li>Google Maps API (Places & Dynamic Map)</li>
+                        <li>Wikipedia PHP API</li>
+                        <li>OpenWeather API</li>
+                        <li>Chart.js</li>
+                        <li>npoint.io</li>
+                    </ul>
+                    <h4>Technologies Used 📚</h4>
+                    <div class="skills-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                </div>
+                <div class="project-reflection">
+                    <h3>Reflection</h3>
+                    <p>This project enhanced my knowledge of asynchronous JavaScript and API integration. Future improvements would focus on optimizing load speed for user experience.</p>
+                </div>
             </div>
         </section>
-        <section class="project-showcase project-two">
-            <h1 class="project-header"> Spotify Song Explorer | <a href="https://ericn01.github.io/Spotify-Songs-Explorer/"> Try It Out Yourself </a> </h1>
-            <div class="project-video"> 
-                <h2> Video 🎥 </h2>   
-                <video> </video> 
+        <section class="project-showcase">
+            <img src="../images/project-card-images/Spotify Song Explorer.png" alt="Spotify Song Explorer preview" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Spotify Song Explorer</h2>
+                <a href="https://ericn01.github.io/Spotify-Songs-Explorer/" class="project-link">Try It Out Yourself</a>
+                <p class="video-link"><a href="path_to_video_2.mp4" target="_blank">Watch Video 🎥</a></p>
+                
+                <div class="project-details">
+                    <h3>Description 📰</h3>
+                    <p>A responsive JavaScript website that offers a variety of search options for over 2,000 Spotify songs. Users can select a song to view detailed data and charts, create playlists, and sort results.</p>
+                    <h4>APIs Used</h4>
+                    <ul>
+                        <li>Spotify API</li>
+                        <li>Chart.js</li>
+                        <li>Other auxiliary APIs for song data and sorting functionality</li>
+                    </ul>
+                    <h4>Technologies Used 📚</h4>
+                    <div class="skills-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                    </div>
+                </div>
+                <div class="project-reflection">
+                    <h3>Reflection</h3>
+                    <p>This project taught me about handling large datasets efficiently and implementing user-driven search and filter functionality.</p>
+                </div>
             </div>
-            <div class="project-description"> 
-                <h2> Project Description </h2>
-                <p> Fully responsive JavaScript website that offers a variety of lookup types for over 2000 songs on Spotify. Users can select their desired song and view  relevant data and charts describing them. Other functionality includes playlist creation & interaction, results sorting, and more!
-                </p>
-                <h4> API's Used </h4>
-                <ul> 
-                    <li> Google Maps 
-                        <ul> 
-                            <li> Places API </li>
-                            <li> Dynamic Map API </li>
-                        </ul>
-                    </li>
-                    <li></li>
-                    <li> Wikipedia's PHP API </li>
-                    <li> OpenWeather API </li>
-                </ul>
-            </div>
-            <div class="programming-languages"> 
-                <h2> Languages Used 📚</h2>
-                <div class="skills-tags technologies-used">              
-                    <div class="tag javascript" id="javascript"> JavaScript</div>
-                    <div class="tag css" id="css"> CSS </div>
-                    <div class="tag html" id="html"> HTML </div>
-                </div>   
-            </div>
-            <div class="reflection">
-                <h2> What would I have changed? </h2>
+        </section>        
+        <section class="project-showcase">
+            <img src="../images/covid-analyser-thumbnail.jpg" alt="COVID-19 Data Analyser preview" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">COVID-19 Data Analyser</h2>
+                <a href="path_to_project_link" class="project-link">Try It Out Yourself</a>
+                <p class="video-link"><a href="path_to_video_3.mp4" target="_blank">Watch Video 🎥</a></p>
+                
+                <div class="project-details">
+                    <h3>Description 📰</h3>
+                    <p>A JavaFX application that analyzes COVID-19 data for Alberta using data from Alberta Health Services (AHS). It presents data through charts, results, and graphs.</p>
+                    <h4>Technologies Used 📚</h4>
+                    <div class="skills-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">FXML</span>
+                        <span class="tag">JavaFX</span>
+                    </div>
+                </div>
+                <div class="project-reflection">
+                    <h3>Reflection</h3>
+                    <p>This project enhanced my understanding of JavaFX and data visualization, as well as how to use public datasets in real-time applications.</p>
+                </div>
             </div>
         </section>
-        <section class="project-showcase project-three">
-            <h1 class="project-header"> COVID-19 Data Analyser </h1>
-            <div class="project-video"> 
-                <h2> Video 🎥 </h2>   
-                <video> </video> 
+        <section class="project-showcase">
+            <img src="../images/project-card-images/Movie Explorer.png" alt="Movie Finder preview" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Movie Finder</h2>
+                <a href="path_to_movie_finder_project" class="project-link">Try It Out Yourself</a>
+                <p class="video-link"><a href="path_to_video_4.mp4" target="_blank">Watch Video 🎥</a></p>
+                
+                <div class="project-details">
+                    <h3>Description 📰</h3>
+                    <p>A React-based single-page application that allows users to find and explore movies by browsing a variety of genres and search parameters.</p>
+                    <h4>APIs Used</h4>
+                    <ul>
+                        <li>TMDB (The Movie Database) API</li>
+                    </ul>
+                    <h4>Technologies Used 📚</h4>
+                    <div class="skills-tags">
+                        <span class="tag">ReactJS</span>
+                        <span class="tag">NodeJS</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-reflection">
+                    <h3>Reflection</h3>
+                    <p>This project provided hands-on experience with React and Node.js, as well as using MongoDB for efficient data storage and retrieval.</p>
+                </div>
             </div>
-            <div class="project-description"> 
-                <h2> Description 📰 </h2>
-                <p> JavaFX applet that analyses Alberta's COVID-19 public data (courtesy of AHS), and presents factual charts, results and graphs using Java's capabilities.
-                </p>
-            </div>
-            <div class="programming-languages"> 
-                <h2> Languages Used 📚</h2>
-                <div class="skills-tags technologies-used">              
-                    <div class="tag javascript" id="javascript"> Java </div>
-                    <div class="tag css" id="css"> FXML (Using Scene Builder) </div>
-                </div>   
-            </div>
-            <div class="technologies-used"></div>
         </section>
-        <section class="project-showcase project-four">
-            <div class="project-video"> </div>
-            <div class="project-description"> </div>
-            <div class="technologies-used"></div>
-        </section>  
+        
     </main>
 </body>
 </html>
