@@ -201,6 +201,14 @@ ul{
 .mobile-only{
     display: none;
 }
+
+/* Image for about me page */
+
+.about-me-img{
+    max-width: 300px;
+}
+
+
 /* Media queries for responsive design */
 
 /* Laptops, smaller monitors */

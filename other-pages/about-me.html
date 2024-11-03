@@ -4,17 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../about-me-styles.css">
+    <title>About Me - Eric Nielsen</title>
 </head>
 <body>
     <header> 
-        <h1> About me page </h1>
+        <h1>About Me</h1>
         <nav class="header-nav-bar"> 
             <ul class="links-container">
-                <li class="header-link"> <a href="../index.html"> Main Page </a> </li>
-                <li class="header-link"> <a href="about-me.html"> About Me </a> </li>
+                <li class="header-link"><a href="../index.html">Main Page</a></li>
+                <li class="header-link"><a href="about-me.html">About Me</a></li>
             </ul>
         </nav>
     </header>
+    <main class="split-screen">
+        <!-- Left Side: Image & Introduction -->
+        <div class="left-panel">
+            <img src="../images/about-me-img.jpg" alt="Image of Eric Nielsen at the mall" class="about-me-img"/>
+            <section class="introduction">
+                <h2>Hi, I'm Eric Nielsen 👋</h2>
+                <p>
+                    I'm a fifth-year Computer Information Systems student at Mount Royal University, focusing on developing rich web applications and exploring data analysis. Currently, I'm refining my web development skills, especially with frameworks like React.
+                </p>
+            </section>
+        </div>
+        
+        <!-- Right Side: Content Sections -->
+        <div class="right-panel">
+            <section class="experience">
+                <h3>My Journey</h3>
+                <p>
+                    My fascination with technology started early on, driven by a curiosity for the mechanics behind my favorite video games, like Minecraft and Mario Kart Wii. The ability to control pixels on a screen seemed magical, sparking a passion that led me to experiment with coding in high school. I created physics formula calculators in C++ (not perfect, but a start!) and even built my own PC. 
+                </p>
+            </section>
+
+            <section class="skills">
+                <h3>Key Skills</h3>
+                <ul>
+                    <li><strong>Languages:</strong> Python, JavaScript, Java</li>
+                    <li><strong>Frameworks & Libraries:</strong> Node.js, React, JavaFX</li>
+                    <li><strong>Tools:</strong> Draw.io, MySQL, Git</li>
+                </ul>
+            </section>
+
+            <section class="projects">
+                <h3>Current Projects</h3>
+                <p>
+                    I'm currently developing an interactive platform that introduces students to web development basics through tutorials, quizzes, and progress tracking. I’m also working on this portfolio site to showcase my projects and skills.
+                </p>
+            </section>
+
+            <section class="personal">
+                <h3>A Bit About Me</h3>
+                <p>
+                    Outside of coding, I enjoy staying active through weight training and long walks with my dog. I also love reading and writing about philosophy and human biology, especially topics around the endocrine system.
+                </p>
+            </section>
+
+            <section class="connect">
+                <h3>Let's Connect!</h3>
+                <p>
+                    If you'd like to talk about web development, data analytics, or just connect, feel free to reach out!
+                </p>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
