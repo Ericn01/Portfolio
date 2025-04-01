@@ -11,6 +11,8 @@ Import for the font that my portfolio will use.
     --text: #010101;
 }
 
+
+
 .flex-container{
     display: flex;
     column-gap: 50px;
@@ -52,6 +54,7 @@ body{
     color: var(--text);
     background-color: var(--background);
     margin: 0px;
+    padding: 0 1rem;
 }
 
 h3{
