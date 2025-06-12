@@ -5,119 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Eric Nielsen's portfolio - Web Development, Data Analytics, and Computational Neuroscience">
     <meta name="keywords" content="Portfolio, web dev, showcase, resume, computational neuroscience, biotech, data analytics"> 
-    <meta name="author" content="Eric Nielsen, Shadowman">
+    <meta name="author" content="Eric Nielsen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Nielsen's Portfolio</title>
+    <title>Eric Nielsen - Portfolio</title>
     <link rel="icon" href="images/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
-    <script src="index.js"></script> 
+    <script src="index.js" defer></script> 
 </head>
 <body>
-    <header> 
-        <h1> Home </h1>
-        <nav class="header-nav-bar"> 
-            <ul class="links-container">
-                <li class="header-link"> <a href="index.html"> <emph> Home Page </emph> </a> </li>
-                <li class="header-link"> <a href="./other-pages/projects.html"> Projects </a> </li>
-                <li class="header-link"> <a href="./other-pages/about-me.html"> About Me </a> </li>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">EN.dev</a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
+                <li><a href="#" class="nav-link" data-page="about">About</a></li>
             </ul>
-        </nav>
-    </header>
-    <section class="flex-container">
-        <aside class="personal-intro">
-            <div class="action-image"> 
-                <img class="my-image" src="images/cover-image.jpg" alt="picture of me!" draggable="false"/>
-            </div>
-            <div class="additional-info">
-                <h1 class="name"> Eric Nielsen </h1>
-                <h3> 
-                    Web Development | Data Analytics | <span class='highlight'>BioTech</span>
-                </h3>
-                <p class="details"> 
-                    Welcome to my portfolio, it's great to see you here! I'm a hard working and disciplined recent Computer Information Systems graduate from Mount Royal University. My current focus is on improving my skills in web development - mainly using React and NodeJS.
-                </p>
-                <p class="details"> 
-                    I have experience in Object Oriented Programming with Java, and software development, alongside a strong interest in data analysis. Above all else I am a proficient problem solver, avid learner, and team player. 
-                </p>
-                <p class="details"> 
-                    I'm deeply fascinated by <strong>computational neuroscience</strong> and <strong>biotech</strong> - fields where I'm actively learning and exploring project opportunities to apply my programming skills.
-                </p>
-            </div>
-            <div class="interests-section">
-                <h3>Current Interests</h3>
-                <div class="interest-tags">
-                    <div class="interest-tag neuroscience">Computational Neuroscience</div>
-                    <div class="interest-tag biotech">BioTech</div>
-                    <div class="interest-tag data-viz">Data Visualization</div>
+        </div>
+    </nav>
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Eric Nielsen</h1>
+                    <p>Computer Information Systems Graduate | Web Developer | Data Enthusiast</p>
+                    <p>Crafting digital experiences with modern technologies and retro-futuristic flair</p>
+                    <a href="#" class="cta-button" onclick="showPage('projects')">View My Work</a>
                 </div>
             </div>
-            <div class="skills-tags"> 
-                <div class="tag react" id="react"> React  </div>
-                <div class="tag node" id="node"> NodeJS </div> 
-                <div class="tag java" id="java"> Java </div>
-                <div class="tag regex" id="regex"> Sys Admin </div>
-                <div class="tag sql" id="sql"> SQL </div>
-            </div>
-            <div class="skill-container">
-                <b> Novice </b>
-                <progress id="skill-bar" value="50" max="100"> </progress> <b> Skilled </b>
-            </div>
-            <hr> 
-            <nav class="social-links"> 
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpgclVDCgbRzwmSmWTCdvXZZCGVBBwRqzJhGvXkttrPFqqHGxNsZkWqXVsHzNRxzlzlXGc">
-                    <img src="images/socials/gmail.png" alt="gmail" class="social-img" title="Email me!">
-                </a>
-                <a href="https://www.linkedin.com/in/eric-nielsen-37a361221/">
-                    <img src="images/socials/linkedin.png" alt="linkedin" class="social-img" title="Connect with me on LinkedIn">
-                </a>
-                <a href="https://github.com/Ericn01">
-                    <img src="images/socials/github.png" alt="github" class="social-img" title="View my code on GitHub">
-                </a>
-                <a href="https://drive.google.com/file/d/1zqfleJrzOsdVbgnKZEHiUfjOokN3upj-/view?usp=sharing">  
-                    <img src="images/socials/resume-icon.png" alt="resume" class="social-img" id="resume" title="Read my resume">
-                </a>
-                <a href="other-pages/about-me.html">
-                    <img src="images/socials/about-me.png" alt="about me" class="social-img" title="About me page">
-                </a>
-            </nav>
-        </aside>
-        <h3 class="mobile-only"> Projects </h3>
-        <section class="work-elements"> 
-            <div class="project city-retriever">
-                 <h2 class="bg-text text-one"> City Retriever Website </h2>
-            </div>
-            <div class="project js-songs-app">
-                <h2 class="bg-text text-two"> Spotify Song Data Website </h2>
-            </div>
-            <div class="project covid-java">
-                <h2 class="bg-text text-three"> COVID-19 Alberta Data Analyser </h2>
-            </div>
-            <div class="project react-project">
-                <h2 class="bg-text text-four">  🚧 Under Construction 🚧 </h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>// Web Development</h3>
+                    <p>Building responsive web applications with React, Node.js, and modern JavaScript. Focused on creating intuitive user experiences with clean, maintainable code.</p>
+                </div>
+                <div class="card">
+                    <h3>// Data Analysis</h3>
+                    <p>Exploring data patterns and insights using Python and SQL. Passionate about turning raw data into meaningful stories and actionable intelligence.</p>
+                </div>
+                <div class="card">
+                    <h3>// Continuous Learning</h3>
+                    <p>Always expanding my skill set with the latest technologies and best practices. Currently diving deeper into React frameworks and data visualization.</p>
+                </div>
             </div>
         </section>
-        <hr class="mobile-only" id="bottom-division-mobile"> 
-        <h3 class="mobile-only"> Links  </h3>
-        <section class="mobile-only links"> 
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpgclVDCgbRzwmSmWTCdvXZZCGVBBwRqzJhGvXkttrPFqqHGxNsZkWqXVsHzNRxzlzlXGc">
-                    <img src="images/socials/gmail.png" alt="gmail" class="social-img" title="Email me!">
-                </a>
-                <a href="https://www.linkedin.com/in/eric-nielsen-37a361221/">
-                    <img src="images/socials/linkedin.png" alt="linkedin" class="social-img" title="Connect with me on LinkedIn">
-                </a>
-                <a href="https://github.com/Ericn01">
-                    <img src="images/socials/github.png" alt="github" class="social-img" title="View my code on GitHub">
-                </a>
-                <a href="https://drive.google.com/file/d/1zqfleJrzOsdVbgnKZEHiUfjOokN3upj-/view?usp=sharing">  
-                    <img src="images/socials/resume-icon.png" alt="resume" class="social-img" id="resume" title="Read my resume">
-                </a>
-                <a href="other-pages/about-me.html">
-                    <img src="images/socials/about-me.png" alt="about me" class="social-img" title="About me page">
-                </a>
+        <!-- Projects Page -->
+        <section id="projects" class="page-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Projects</h1>
+                    <p>A showcase of my recent work and ongoing developments</p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Interactive Learning Platform</h3>
+                    <p>A comprehensive web development tutorial platform featuring interactive lessons, quizzes, and progress tracking. Built with React and Node.js.</p>
+                    <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
+                    <p><strong>Status:</strong> In Development</p>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>This retro-futuristic portfolio showcasing my work and skills. Features responsive design, smooth animations, and modern CSS techniques.</p>
+                    <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                    <p><strong>Status:</strong> Live</p>
+                </div>
+                <div class="project-card">
+                    <h3>Coming Soon...</h3>
+                    <p>More exciting projects are on the way! Stay tuned for updates on data visualization tools, web applications, and experimental projects.</p>
+                </div>
+            </div>
         </section>
-        <footer>
-            <p>© 2025 Eric Nielsen | Exploring the intersection of code and biology</p>
-        </footer>
+
+        <!-- About Page -->
+        <section id="about" class="page-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>About Me</h1>
+                    <p>Get to know the person behind the code</p>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div>
+                    <img src="./images//about-me-img.jpg" alt="Eric Nielsen" class="about-image" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>Hi, I'm Eric Nielsen 👋</h2>
+                    <p>
+                        I'm a recent (December 2024) Computer Information Systems graduate from Mount Royal University, focusing on developing rich web applications and exploring data analysis. Currently, I'm refining my web development skills, especially with frameworks like React.
+                    </p>
+
+                    <h3>// My Journey</h3>
+                    <p>
+                        My fascination with technology started early on, driven by a curiosity for the mechanics behind my favorite video games, like Minecraft and Mario Kart Wii. The ability to control pixels on a screen seemed magical, sparking a passion that led me to experiment with coding in high school. I created physics formula calculators in C++ (not perfect, but a start!) and even built my own PC.
+                    </p>
+
+                    <h3>// Key Skills</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Python, JavaScript, Java</li>
+                        <li><strong>Frameworks & Libraries:</strong> Node.js, React, JavaFX</li>
+                        <li><strong>Tools:</strong> Draw.io, MySQL, Git</li>
+                    </ul>
+
+                    <h3>// Current Projects</h3>
+                    <p>
+                        I'm currently developing an interactive platform that introduces students to web development basics through tutorials, quizzes, and progress tracking. I'm also working on this portfolio site to showcase my projects and skills.
+                    </p>
+
+                    <h3>// A Bit About Me</h3>
+                    <p>
+                        Outside of coding, I enjoy staying active through weight training and long walks with my dog. I also love reading and writing about philosophy and human biology, especially topics around the endocrine system.
+                    </p>
+
+                    <h3>// Let's Connect!</h3>
+                    <p>
+                        If you'd like to talk about web development, data analytics, or just connect, feel free to reach out!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
