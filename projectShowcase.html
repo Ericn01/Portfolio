@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Eric Nielsen's portfolio - Web Development, Data Analytics">
+    <meta name="keywords" content="Portfolio, web dev, showcase, resume, data analytics"> 
+    <meta name="author" content="Eric Nielsen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Nielsen - Portfolio</title>
+    <link rel="icon" href="images/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/projectShowcase.css">
+    <script type="module">
+    // projectShowcase.js
+    import { ProjectDataManager, populateProjectPage } from "./ProjectDataManager.js";
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', async () => {
+        const projectDataManager = new ProjectDataManager();
+        console.log(projectDataManager)
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectName = urlParams.get('project');
+        if (projectName) {
+            try {
+                await populateProjectPage(projectName, projectDataManager);
+                console.log(`Project page populated for: ${projectName}`);
+            } catch (error) {
+                console.error('Error populating project page:', error);
+            }
+        }
+    });
+    </script>
+</head>
+<body>
+    <nav class="project-showcase-nav">
+        <div class="nav-container projects">
+            <a href="index.html" class="back-button">
+                <span>←</span> Back to Portfolio
+            </a>
+            <div class="project-title-nav"><!-- Project name --> </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Header -->
+        <section class="project-header">
+            <h1><!-- Project name --></h1>
+            <p class="project-tagline"><!-- Hopefully not too cheesy tagline goes here--></p>
+            <div class="project-status in-development"><!-- Project Status --></div>
+        </section>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <a href="#" class="action-button demo">
+                <span>🔗</span> Live Demo
+            </a>
+            <a href="#" class="action-button source">
+                <span>📁</span> Source Code
+            </a>
+            <a href="#" class="action-button documentation">
+                <span>📄</span> Documentation
+            </a>
+        </div>
+
+        <!-- Main Showcase -->
+        <div class="showcase-grid">
+            <div class="main-showcase">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        // Project Screenshot<br>
+                        // Coming Soon
+                    </div>
+                </div>
+                <div class="project-overview">
+                    <p>This interactive learning platform is designed to teach web development fundamentals through hands-on tutorials, real-time code editing, and comprehensive progress tracking. The platform features a modern, intuitive interface that adapts to different learning styles and skill levels.</p>
+                    
+                    <p>Built with React and Node.js, the application provides seamless user experiences with instant feedback, collaborative features, and personalized learning paths. The backend utilizes MongoDB for flexible data storage and Express.js for robust API management.</p>
+                </div>
+            </div>
+
+            <div class="project-sidebar">
+                <div class="info-card">
+                    <h3>// Tech Stack</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+
+                <div class="info-card stats-card">
+                    <h3>// Project Stats</h3>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Months</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card timeline-card">
+                    <h3>// Timeline</h3>
+                    <p><strong>Started:</strong> October 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <section class="section">
+            <div class="section-header">
+                <h2>// Key Features</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-content">
+                <p>The platform includes several innovative features designed to enhance the learning experience:</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4 class="feature-item-heading"></h4>
+                        <p class="feature-item-desc"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Challenges -->
+        <section class="section ">
+            <div class="section-header">
+                <h2>// Challenges & Solutions</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-content challenges-content">
+                <div class="challenge-item">
+                    <h4>Real-time Code Execution</h4>
+                    <p>Implementing safe, sandboxed code execution for user-submitted code while maintaining performance and security.</p>
+                    <div class="solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        <p>Implemented Docker containers with strict resource limits and used Web Workers for client-side code execution. Created a custom security layer that filters dangerous operations.</p>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>Scalable Progress Tracking</h4>
+                    <p>Designing a database schema that efficiently tracks detailed user progress across multiple learning paths and modules.</p>
+                    <div class="solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        <p>Implemented a hierarchical progress tracking system using MongoDB's flexible document structure with optimized indexing for fast queries.</p>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <h4>User Experience Optimization</h4>
+                    <p>Balancing feature richness with simplicity to avoid overwhelming new users while providing advanced capabilities.</p>
+                    <div class="solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        <p>Created a progressive disclosure UI pattern with customizable interfaces that adapt to user skill level and preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Example -->
+        <section class="section">
+            <div class="section-header">
+                <h2>// Code Highlights</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-content">
+                <p class="section-overview"></p>
+                
+                <div class="code-snippet">
+                    <div class="code-header">
+                        <div class="code-title"></div>
+                    </div>
+                    <pre>
+                        <code class="code-content"> </code>
+                    </pre>
+                </div>
+
+                <p>This system efficiently handles progress updates while maintaining real-time synchronization across the application.</p>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="section">
+            <div class="section-header">
+                <h2>// Lessons Learned</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-content lessons-content">
+                <ul class="lessons-list" style="color: var(--text-secondary); padding-left: 20px;">
+                    <li class="lesson-learned">
+                        <strong class="lesson-learned-pop">User Testing is Critical:</strong> 
+                        <!-- Lesson learned content -->
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Future Enhancements -->
+        <section class="section">
+            <div class="section-header">
+                <h2>// Future Enhancements</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="section-content">
+                <div class="feature-grid enhancements-grid">
+                    <div class="feature-item">
+                        <h4 class="feature-item-heading"></h4>
+                        <p class="feature-item-desc"></p>
+                    </div>  
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -11,6 +11,8 @@
     --secondary-dark: #16213e;
     --accent-cyan: #4cc9f0;
     --accent-pink: #f72585;
+    --accent-green: #06ffa5;
+    --accent-orange: #ff6b35;
     --text-primary: #ffffff;
     --text-secondary: #b8b8b8;
     --grid-glow: rgba(76, 201, 240, 0.3);
@@ -360,6 +362,7 @@ main {
 .about-content ul {
     color: var(--text-secondary);
     padding-left: 20px;
+    list-style-type: none;
 }
 
 .about-content strong {
@@ -380,6 +383,10 @@ main {
     border-radius: 15px;
     padding: 25px;
     transition: all 0.3s ease;
+}
+
+.is-project {
+    cursor:pointer;
 }
 
 .project-card:hover {

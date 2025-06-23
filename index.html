@@ -11,7 +11,7 @@
     <link rel="icon" href="images/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
-    <script src="index.js" defer></script> 
+    <script src="index.js" type="module" defer></script> 
 </head>
 <body>
     <nav>
@@ -32,7 +32,7 @@
                     <h1>Eric Nielsen</h1>
                     <p>Computer Information Systems Graduate | Web Developer | Data Enthusiast</p>
                     <p>Crafting digital experiences with modern technologies and retro-futuristic flair</p>
-                    <a href="#" class="cta-button" onclick="showPage('projects')">View My Work</a>
+                    <a href="#" class="cta-button">View My Work</a>
                 </div>
             </div>
 
@@ -61,13 +61,13 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card is-project" data-name="interactive-learning-platform">
                     <h3>Interactive Learning Platform</h3>
                     <p>A comprehensive web development tutorial platform featuring interactive lessons, quizzes, and progress tracking. Built with React and Node.js.</p>
                     <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
                     <p><strong>Status:</strong> In Development</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card is-project" data-name="portfolio-website">
                     <h3>Portfolio Website</h3>
                     <p>This retro-futuristic portfolio showcasing my work and skills. Features responsive design, smooth animations, and modern CSS techniques.</p>
                     <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
