@@ -16,7 +16,9 @@ const showPage = (pageId) => {
     document.querySelector(`[data-page="${pageId}"]`).classList.add('active');
 }
 
-
+/**
+ * This function is responsible for initializing event listeners. 
+ */
 const initEventListeners = () => {
     // Projects page click handler
     const projectsList = document.querySelectorAll('.project-card.is-project');

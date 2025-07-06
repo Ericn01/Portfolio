@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/projectShowcase.css">
     <script type="module">
+        
     // projectShowcase.js
     import { ProjectDataManager, populateProjectPage } from "./ProjectDataManager.js";
 
@@ -86,20 +87,9 @@
                     </div>
                 </div>
 
-                <div class="info-card stats-card">
-                    <h3>// Project Stats</h3>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <div class="stat-number"></div>
-                            <div class="stat-label"></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="info-card stats-card" style="display:none"></div>
 
-                <div class="info-card timeline-card">
-                    <h3>// Timeline</h3>
-                    <p><strong></strong></p>
-                </div>
+                <div class="info-card timeline-card" style="display:none"></div>
             </div>
         </div>
 
@@ -121,7 +111,7 @@
         </section>
 
         <!-- Technical Challenges -->
-        <section class="section ">
+        <section class="section challenges-section" style="display:none">
             <div class="section-header">
                 <h2>// Challenges & Solutions</h2>
                 <div class="section-line"></div>
@@ -139,7 +129,7 @@
         </section>
 
         <!-- Code Example -->
-        <section class="section">
+        <section class="section code-section" style="display:none">
             <div class="section-header">
                 <h2>// Code Highlights</h2>
                 <div class="section-line"></div>
@@ -161,7 +151,7 @@
         </section>
 
         <!-- Lessons Learned -->
-        <section class="section">
+        <section class="section lessons-section" style="display:none">
             <div class="section-header">
                 <h2>// Lessons Learned</h2>
                 <div class="section-line"></div>
@@ -177,7 +167,7 @@
         </section>
 
         <!-- Future Enhancements -->
-        <section class="section">
+        <section class="section enhancement-section" style="display:none">
             <div class="section-header">
                 <h2>// Future Enhancements</h2>
                 <div class="section-line"></div>

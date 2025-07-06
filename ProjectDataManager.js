@@ -53,10 +53,7 @@ export async function populateProjectPage(projectId, dataManager) {
 
     // Get specific project
     const project = dataManager.getProject(projectId);
-    if (!project) {
-        console.error('Project not found:', projectId);
-        return;
-    }
+    if (!project) return;
 
     // Populate header
     const title = document.querySelector('.project-header h1');
@@ -85,7 +82,7 @@ export async function populateProjectPage(projectId, dataManager) {
         overview.innerHTML = `<p>${project.description}</p>`;
     }
 
-    // Populate tech stack
+    // Populate tech stack (required)
     const techStack = document.querySelector('.tech-stack');
     if (techStack && project.tech_stack) {
         techStack.innerHTML = project.tech_stack
@@ -94,85 +91,118 @@ export async function populateProjectPage(projectId, dataManager) {
     }
 
     // Populate stats
-    const statItems = document.querySelectorAll('.stat-item');
-    if (statItems.length >= 4) {
-        statItems[0].querySelector('.stat-number').textContent = project.stats.months;
-        statItems[1].querySelector('.stat-number').textContent = project.stats.features || 0;
-        statItems[2].querySelector('.stat-number').textContent = project.stats.lines_of_code >= 1000 ? 
-        Math.floor(project.stats.lines_of_code / 1000) + 'K+' : project.stats.lines_of_code;
-        statItems[3].querySelector('.stat-number').textContent = project.stats.iterations || 0;
+    const statsCard = document.querySelector('.stats-card');
+    if (statsCard && project.stats && Object.keys(project.stats).length > 0) {
+        statsCard.style.display = '';
+        statsCard.innerHTML = `
+            <h3>// Project Stats</h3>
+            <div class="project-stats">
+                ${project.stats.months ? `<div class="stat-item"><div class="stat-number">${project.stats.months}</div><div class="stat-label">Months</div></div>` : ''}
+                ${project.stats.features ? `<div class="stat-item"><div class="stat-number">${project.stats.features}</div><div class="stat-label">Features</div></div>` : ''}
+                ${project.stats.lines_of_code ? `<div class="stat-item"><div class="stat-number">${project.stats.lines_of_code >= 1000 ? Math.floor(project.stats.lines_of_code / 1000) + 'K+' : project.stats.lines_of_code}</div><div class="stat-label">Lines of Code</div></div>` : ''}
+                ${project.stats.iterations ? `<div class="stat-item"><div class="stat-number">${project.stats.iterations}</div><div class="stat-label">Iterations</div></div>` : ''}
+            </div>
+        `;
+    } else if (statsCard) {
+        statsCard.style.display = 'none';
     }
 
     // Populate timeline
     const timelineCard = document.querySelector('.timeline-card');
-    if (timelineCard && project.timeline) {
+    if (timelineCard && project.timeline && Object.keys(project.timeline).length > 0) {
+        timelineCard.style.display = '';
         let timelineHTML = '<h3>// Timeline</h3>';
         if (project.timeline.started) timelineHTML += `<p><strong>Started:</strong> ${project.timeline.started}</p>`;
         if (project.timeline.mvp) timelineHTML += `<p><strong>MVP:</strong> ${project.timeline.mvp}</p>`;
         if (project.timeline.beta) timelineHTML += `<p><strong>Beta:</strong> ${project.timeline.beta}</p>`;
         if (project.timeline.launch) timelineHTML += `<p><strong>Launch:</strong> ${project.timeline.launch}</p>`;
         timelineCard.innerHTML = timelineHTML;
+    } else if (timelineCard) {
+        timelineCard.style.display = 'none';
     }
 
-    // Populate key features
+    // Populate key features (required)
     const featureGrid = document.querySelector('.feature-grid');
     if (featureGrid && project.key_features) {
         featureGrid.innerHTML = project.key_features
-        .map(feature => `
-            <div class="feature-item">
-            <h4>${feature.name}</h4>
-            <p>${feature.description}</p>
-            </div>
-        `)
-        .join('');
-}
-
-    // Populate challenges & solutions
-    const challengesSection = document.querySelector('.challenges-content');
-    if (challengesSection && project.challenges_solutions) {
-        challengesSection.innerHTML = project.challenges_solutions
-        .map(item => `
-            <div class="challenge-item">
-            <h4>${item.challenge}</h4>
-            <p>${item.challenge_description}</p>
-            <div class="solution">
-                <div class="solution-label">SOLUTION:</div>
-                <p>${item.solution}</p>
-            </div>
-            </div>
-        `)
-        .join('');
+            .map(feature => `
+                <div class="feature-item">
+                    <h4>${feature.name}</h4>
+                    <p>${feature.description}</p>
+                </div>
+            `)
+            .join('');
+    }
+    const featureDesc = document.querySelector('.feature-description');
+    if (featureDesc && project.features_description) {
+        featureDesc.textContent = project.features_description;
+    }
+    
+    // Challenges & Solutions (optional)
+    const challengesSection = document.querySelector('.challenges-section');
+    const challengesContent = document.querySelector('.challenges-content');
+    if (challengesSection && challengesContent && project.challenges_solutions && project.challenges_solutions.length > 0) {
+        challengesSection.style.display = '';
+        challengesContent.innerHTML = project.challenges_solutions
+            .map(item => `
+                <div class="challenge-item">
+                    <h4>${item.challenge}</h4>
+                    <p>${item.challenge_description}</p>
+                    <div class="solution">
+                        <div class="solution-label">SOLUTION:</div>
+                        <p>${item.solution}</p>
+                    </div>
+                </div>
+            `)
+            .join('');
+    } else if (challengesSection) {
+        challengesSection.style.display = 'none';
     }
 
-// Populate code highlights
-const codeSection = document.querySelector('.code-snippet');
-if (codeSection && project.code_highlights) {
-    const codeTitle = codeSection.querySelector('.code-title');
-    const codeBlock = codeSection.querySelector('code');
-    
-    if (codeTitle) codeTitle.textContent = project.code_highlights.file_name;
-    if (codeBlock) codeBlock.textContent = project.code_highlights.code_highlight;
-}
+    // Code Highlights (optional)
+    const codeSection = document.querySelector('.code-section');
+    const codeTitle = document.querySelector('.code-title');
+    const codeBlock = document.querySelector('.code-content');
+    const codeOverview = document.querySelector('.section-overview');
+    const codeDesc = document.querySelector('.code-description');
 
-// Populate lessons learned
-const lessonsSection = document.querySelector('.lessons-list');
-if (lessonsSection && project.lessons_learned) {
-    lessonsSection.innerHTML = project.lessons_learned
-    .map(lesson => `<li>${lesson}</li>`)
-    .join('');
-}
+    if (codeSection && project.code_highlights) {
+        codeSection.style.display = '';
+        if (codeTitle) codeTitle.textContent = project.code_highlights.file_name || '';
+        if (codeBlock) codeBlock.textContent = project.code_highlights.code_highlight || '';
+        if (codeOverview) codeOverview.textContent = project.code_highlights.overview || '';
+        if (codeDesc) codeDesc.textContent = project.code_highlights.description || '';
+    } else if (codeSection) {
+        codeSection.style.display = 'none';
+    }
 
-    // Populate future enhancements
+    // Lessons Learned (optional)
+    const lessonsSection = document.querySelector('.lessons-section');
+    const lessonsList = document.querySelector('.lessons-list');
+    if (lessonsSection && lessonsList && project.lessons_learned && project.lessons_learned.length > 0) {
+        lessonsSection.style.display = '';
+        lessonsList.innerHTML = project.lessons_learned
+            .map(lesson => `<li>${lesson}</li>`)
+            .join('');
+    } else if (lessonsSection) {
+        lessonsSection.style.display = 'none';
+    }
+
+    // Future Enhancements (optional)
+    const enhancementsSection = document.querySelector('.enhancements-section');
     const enhancementsGrid = document.querySelector('.enhancements-grid');
-    if (enhancementsGrid && project.future_enhancements) {
+    if (enhancementsSection && enhancementsGrid && project.future_enhancements && project.future_enhancements.length > 0) {
+        enhancementsSection.style.display = '';
         enhancementsGrid.innerHTML = project.future_enhancements
-        .map(enhancement => `
-            <div class="feature-item">
-            <h4>${enhancement.name}</h4>
-            <p>${enhancement.description}</p>
-            </div>
-        `)
-        .join('');
+            .map(enhancement => `
+                <div class="feature-item">
+                    <h4>${enhancement.name}</h4>
+                    <p>${enhancement.description}</p>
+                </div>
+            `)
+            .join('');
+    } else if (enhancementsSection) {
+        enhancementsSection.style.display = 'none';
     }
 }
 
