@@ -111,6 +111,26 @@ nav {
     width: 100%;
 }
 
+/* Project status */
+.project-status {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(6, 255, 165, 0.2);
+    border: 1px solid var(--accent-green);
+    border-radius: 20px;
+    color: var(--accent-green);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project-status.in-development {
+    background: rgba(255, 107, 53, 0.2);
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+}
+
 /* Main content */
 main {
     margin-top: 100px;
