@@ -62,25 +62,25 @@
     <h2>Projects</h2>
 
     <h3>Cardiovascular Disease Risk Factor Analysis</h3>
-    <p>I wanted to understand which demographic and physiological factors most strongly associate with cardiovascular disease—not just read about them in literature, but confirm them myself through rigorous statistical analysis. Working with a large Kaggle dataset, I performed exploratory data analysis, statistical hypothesis testing (t-tests and chi-square tests), and effect size calculations to identify the strongest risk factors.</p>
+    <p>I wanted to understand which demographic and physiological factors most strongly associate with cardiovascular disease. Not just read about them in literature, but confirm them myself through rigorous statistical analysis. Working with a large Kaggle dataset, I performed exploratory data analysis, statistical hypothesis testing (t-tests and chi-square tests), and effect size calculations to identify the strongest risk factors.</p>
 
-    <p>The analysis confirmed what the medical literature suggests, but seeing it emerge from the data yourself is different than being told. Blood pressure (both systolic and diastolic) showed the strongest associations with cardiovascular disease presence, followed by age, BMI, and cholesterol levels. What surprised me was how low smoking ranked—it was statistically significant but had a much smaller effect size than I expected. That's exactly the kind of finding that generates new questions: why is the effect smaller in this dataset? What confounding factors might be at play?</p>
+    <p>The analysis confirmed what the medical literature suggests, but seeing it emerge from the data yourself is different than being told. Blood pressure (both systolic and diastolic) showed the strongest associations with cardiovascular disease presence, followed by age, BMI, and cholesterol levels. What surprised me was how low smoking ranked. It was statistically significant but had a much smaller effect size than I expected. That's exactly the kind of finding that generates new questions: why is the effect smaller in this dataset? What confounding factors might be at play?</p>
 
     <pre>
-        Top 10 Risk Factors (All Variables Combined):
-        --------------------------------------------------------------------------------
-        Rank   Variable             Type            Effect Size     P-Value        
-        --------------------------------------------------------------------------------
-        1      ap_hi                Continuous      0.959           0.00e+00       
-        2      ap_lo                Continuous      0.726           0.00e+00       
-        3      age_years            Continuous      0.493           0.00e+00       
-        4      bmi                  Continuous      0.391           0.00e+00       
-        5      weight               Continuous      0.365           0.00e+00       
-        6      cholesterol          Categorical     0.221           0.00e+00       
-        7      gluc                 Categorical     0.090           2.53e-121      
-        8      active               Categorical     0.038           4.64e-23       
-        9      height               Continuous      0.024           1.88e-03       
-        10     smoke                Categorical     0.016           1.99e-05
+Top 10 Risk Factors (All Variables Combined):
+--------------------------------------------------------------------------------
+Rank   Variable             Type            Effect Size     P-Value        
+--------------------------------------------------------------------------------
+1      ap_hi                Continuous      0.959           0.00e+00       
+2      ap_lo                Continuous      0.726           0.00e+00       
+3      age_years            Continuous      0.493           0.00e+00       
+4      bmi                  Continuous      0.391           0.00e+00       
+5      weight               Continuous      0.365           0.00e+00       
+6      cholesterol          Categorical     0.221           0.00e+00       
+7      gluc                 Categorical     0.090           2.53e-121      
+8      active               Categorical     0.038           4.64e-23       
+9      height               Continuous      0.024           1.88e-03       
+10     smoke                Categorical     0.016           1.99e-05
     </pre>
 
     <p>This project let me apply the statistical inference methods I'd been learning to a real-world dataset related to human physiology. The process of going through the data, testing hypotheses, and uncovering patterns felt like discovering truths about the world in a rigorous way—which is exactly what drew me to data analysis in the first place.</p>
@@ -88,14 +88,14 @@
     <h3>Student Performance Prediction Model</h3>
     <p>For a database course project, I built a linear regression model to predict student grades based on their study effort hours. The dataset came from multiple CSV files representing student performance and counseling data, which I cleaned, transformed, and merged using pandas.</p>
 
-    <p>The data cleaning process was thorough—handling missing values, removing outliers (including one student whose performance pattern was statistically anomalous), and ensuring all values fell within acceptable ranges. Once the data was ready, I performed exploratory analysis and found something striking: the correlation between average effort hours and grades was 0.967—nearly perfect positive correlation.</p>
+    <p>The data cleaning process was thorough. I handled missing values, removed outliers (including one student whose performance pattern was statistically anomalous), and ensured all values fell within acceptable ranges. Once the data was ready, I performed exploratory analysis and found something striking: the correlation between average effort hours and grades was 0.967, a nearly perfect positive correlation.</p>
 
     <p>I built both a general model predicting grades across all students and personalized models for individual students. The general model achieved an R² score of 0.94 with a mean squared error of just 0.385, meaning it explained 94% of the variance in student grades. The relationship was remarkably linear: on average, each additional hour of effort corresponded to a 6.34% increase in grade, with students typically reaching 100% after about 12.5 hours of work.</p>
 
-    <p>What made this project valuable wasn't just the strong predictive accuracy—it was learning the entire pipeline: data extraction and cleaning with pandas, exploratory data analysis to understand the data's structure, model building and evaluation, and interpreting results in a meaningful way. The fact that properly cleaned data could produce such accurate predictions was genuinely exciting to me.</p>
+    <p>What made this project valuable wasn't just the strong predictive accuracy. It was learning the entire pipeline: data extraction and cleaning with pandas, exploratory data analysis to understand the data's structure, model building and evaluation, and interpreting results in a meaningful way. The fact that properly cleaned data could produce such accurate predictions was genuinely exciting to me.</p>
 
     <h3>Text Document Analyzer</h3>
-    <p>I built a web application that performs comprehensive analysis on uploaded documents (PDF, DOCX, or TXT files), but what interests me most about this project is the backend—a Python NLP pipeline that extracts meaningful insights from text.</p>
+    <p>I built a web application that performs comprehensive analysis on uploaded documents (PDF, DOCX, or TXT files), but what interests me most about this project is the backend. It's a Python NLP pipeline that extracts meaningful insights from text.</p>
 
     <p>The backend combines multiple models working together: sentiment analysis to understand emotional tone and confidence, keyword extraction to identify the most important terms, topic modeling to uncover main themes, document summarization, and readability scoring. I built a text preprocessing system that cleans and normalizes documents before analysis, improving the quality of results across all downstream tasks.</p>
 
@@ -104,7 +104,7 @@
     <p>This project taught me about building robust data pipelines, working with pre-trained NLP models, and the importance of preprocessing in getting reliable results. While the frontend provides a nice interface, the real work happens in how the backend processes and analyzes text data to extract actionable insights.</p>
 
     <h3>MemoryKPR Image Classification</h3>
-    <p>This was a group project in my applied machine learning course where we built a CNN-based image classification system. My specific contribution focused on the tag matching component—I implemented a system that combined outputs from spaCy and Hugging Face models to match images with appropriate tags, calculating confidence scores as weighted averages of both models' predictions.</p>
+    <p>This was a group project in my applied machine learning course where we built a CNN-based image classification system. My specific contribution focused on the tag matching component. I implemented a system that combined outputs from spaCy and Hugging Face models to match images with appropriate tags, calculating confidence scores as weighted averages of both models' predictions.</p>
 
     <p>Working on a team project with real client requirements taught me about the ML pipeline process: data preprocessing, model training and evaluation, and the practical challenges of integrating multiple pre-trained models. It was my first hands-on experience with the full lifecycle of a machine learning project, from defining requirements with stakeholders to deploying a working system.</p>
 
@@ -114,6 +114,23 @@
     <p>During my internship at AHS, I worked primarily with Power BI and SQL Server Management Studio on healthcare data projects. Most of my time went into building a project management dashboard in Power BI, connected to Excel data sources, that tracked ongoing and expected projects including resource allocation, scope, and timelines.</p>
 
     <p>This experience taught me practical skills I hadn't learned in coursework: how to present data effectively to stakeholders (choosing the right visualizations, formatting, spacing), the importance of clear and consistent communication with the people who'll actually use what you build, and the fundamentals of ETL processes in a real-world enterprise environment. Working with healthcare data also meant understanding the importance of data accuracy and attention to detail when the stakes are high.</p>
+
+    <h2>Education</h2>
+
+    <h3>Mount Royal University - Bachelor of Computer Information Systems</h3>
+    <p><em>Fall 2020 - Winter 2024</em></p>
+
+    <p>This program gave me a strong foundation in both technical skills and business understanding. I built capabilities in software development, systems analysis, and project management through hands-on coursework in web development, databases, and applied machine learning. The degree prepared me to work at the intersection of technology and business in the digital economy.</p>
+
+    <p><strong>Relevant Coursework:</strong></p>
+
+    <p><strong>Linear Algebra for Data Science:</strong> Learned powerful linear algebra methods including singular value decomposition, principal component analysis, linear regression, the importance of orthogonality of vectors, and Haar transforms.</p>
+
+    <p><strong>Applied Machine Learning:</strong> Studied machine learning algorithms for both supervised and unsupervised methods (classification, clustering), euclidean distance, the application of various models, and the general process for building models using scikit-learn.</p>
+
+    <p><strong>Programming Courses (Programming 1-3):</strong> Learned to program in Java, JavaScript, PHP, and Python. Covered general software development principles, object-oriented programming, data structures, and algorithms.</p>
+
+    <p><strong>Database Courses (Database I/II):</strong> Learned to write complex SQL queries, database normalization, database design, and data mining.</p>
 
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ericnielsen2001@gmail.com">ericnielsen2001@gmail.com</a></p>
