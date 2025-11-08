@@ -2,144 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Eric Nielsen's portfolio - Web Development, Data Analytics, and Computational Neuroscience">
-    <meta name="keywords" content="Portfolio, web dev, showcase, resume, computational neuroscience, biotech, data analytics"> 
-    <meta name="author" content="Eric Nielsen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Nielsen - Portfolio</title>
-    <link rel="icon" href="images/portfolio_favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <script src="index.js" type="module" defer></script> 
+    <title>Eric Nielsen - Data Analyst</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3em;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            border: 1px solid #ddd;
+        }
+        .contact-links {
+            margin-top: 1em;
+        }
+        .contact-links p {
+            margin: 0.3em 0;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">EN.dev</a>
-            <ul class="nav-links">
-                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
-                <li><a href="#" class="nav-link" data-page="about">About</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <!-- Home Page -->
-        <section id="home" class="page-section active">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>Eric Nielsen</h1>
-                    <p>Computer Information Systems Graduate | Web Development & Data Analytics </p>
-                    <a href="#" class="cta-button">View My Work</a>
-                </div>
-            </div>
+    <h1>Eric Nielsen</h1>
+    
+    <p>I'm Eric Nielsen. I'm fascinated by what happens when you ask the right questions about data and pursue the answers rigorously. I work in Python for statistical analysis and machine learning, and I'm particularly drawn to problems involving human systems—psychology, neuroscience, pharmacology. I'm still building my skills, but what drives me is genuine curiosity about what statistical methods can reveal.</p>
 
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>// Web Development</h3>
-                    <p>Building responsive web applications with React and Node.js. Focused on creating intuitive user experiences with clean, maintainable code.</p>
-                </div>
-                <div class="card">
-                    <h3>// Data Analysis</h3>
-                    <p>Exploring data patterns and insights using Python and SQL. Passionate about turning raw data into meaningful stories and actionable intelligence.</p>
-                </div>
-                <div class="card">
-                    <h3>// Continuous Learning</h3>
-                    <p>Always expanding my skill set with the latest technologies and best practices. Currently diving deeper into React frameworks (NextJS) and data visualization.</p>
-                </div>
-            </div>
-        </section>
+    <h2>Projects</h2>
 
-        <!-- Projects Page -->
-        <section id="projects" class="page-section">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>Projects</h1>
-                    <p>A showcase of my recent work and ongoing developments</p>
-                </div>
-            </div>
+    <h3>Cardiovascular Disease Risk Factor Analysis</h3>
+    <p>I wanted to understand which demographic and physiological factors most strongly associate with cardiovascular disease—not just read about them in literature, but confirm them myself through rigorous statistical analysis. Working with a large Kaggle dataset, I performed exploratory data analysis, statistical hypothesis testing (t-tests and chi-square tests), and effect size calculations to identify the strongest risk factors.</p>
 
-            <div class="projects-grid">
-                <div class="project-card is-project" data-name="spacex-launch-tracker">
-                    <h3>SpaceX Launches Dashboard</h3>
-                    <p>A responsive web app that showcases SpaceX's launch history and rocket fleet using data from their public API.</p>
-                    <p><strong>Technologies:</strong> React </p>
-                    <p><strong>Status:</strong> <span class="project-status"> Live </span> </p>
-                </div>
-                <div class="project-card is-project" data-name="personal-expense-tracker">
-                    <h3>Personal Expense Tracker</h3>
-                    <p>A comprehensive personal finance management tool built with vanilla JavaScript that helps users track expenses, set budgets, and generate financial reports.</p>
-                    <p><strong>Technologies:</strong> JavaScript, CSS, HTML</p>
-                    <p><strong>Status:</strong> <span class="project-status"> Live </span></p>
-                </div>
-                <div class="project-card is-project" data-name="interactive-learning-platform">
-                    <h3>Web Dev Learning Platform</h3>
-                    <p>A comprehensive web development tutorial platform featuring interactive lessons, quizzes, and progress tracking. Built with React and Node.js.</p>
-                    <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
-                    <p><strong>Status:</strong> <span class="project-status in-development"> In Development </span></p>
-                </div>
-                <div class="project-card is-project" data-name="portfolio-website">
-                    <h3>Portfolio Website</h3>
-                    <p>This retro-futuristic portfolio showcasing my work and skills. Features responsive design, smooth animations, and modern CSS techniques.</p>
-                    <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
-                    <p><strong>Status:</strong> <span class="project-status"> Live </span></p>
-                </div>
-                <div class="project-card">
-                    <h3>Coming Soon...</h3>
-                    <p>More exciting projects are on the way! Stay tuned for updates on data visualization tools, web applications, and experimental projects.</p>
-                </div>
-            </div>
-        </section>
+    <p>The analysis confirmed what the medical literature suggests, but seeing it emerge from the data yourself is different than being told. Blood pressure (both systolic and diastolic) showed the strongest associations with cardiovascular disease presence, followed by age, BMI, and cholesterol levels. What surprised me was how low smoking ranked—it was statistically significant but had a much smaller effect size than I expected. That's exactly the kind of finding that generates new questions: why is the effect smaller in this dataset? What confounding factors might be at play?</p>
 
-        <!-- About Page -->
-        <section id="about" class="page-section">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>About Me</h1>
-                    <p>Get to know the person behind the code</p>
-                </div>
-            </div>
+    <pre>
+        Top 10 Risk Factors (All Variables Combined):
+        --------------------------------------------------------------------------------
+        Rank   Variable             Type            Effect Size     P-Value        
+        --------------------------------------------------------------------------------
+        1      ap_hi                Continuous      0.959           0.00e+00       
+        2      ap_lo                Continuous      0.726           0.00e+00       
+        3      age_years            Continuous      0.493           0.00e+00       
+        4      bmi                  Continuous      0.391           0.00e+00       
+        5      weight               Continuous      0.365           0.00e+00       
+        6      cholesterol          Categorical     0.221           0.00e+00       
+        7      gluc                 Categorical     0.090           2.53e-121      
+        8      active               Categorical     0.038           4.64e-23       
+        9      height               Continuous      0.024           1.88e-03       
+        10     smoke                Categorical     0.016           1.99e-05
+    </pre>
 
-            <div class="about-grid">
-                <div>
-                    <img src="./images/aboutme_sm.jpg" alt="Eric Nielsen" class="about-image" loading="lazy">
-                </div>
-                <div class="about-content">
-                    <h2>Hi, I'm Eric Nielsen 👋</h2>
-                    <p>
-                        I'm a recent (December 2024) Computer Information Systems graduate from Mount Royal University, focusing on developing rich web applications and exploring data analysis. Currently, I'm refining my web development skills, especially with frameworks like React.
-                    </p>
+    <p>This project let me apply the statistical inference methods I'd been learning to a real-world dataset related to human physiology. The process of going through the data, testing hypotheses, and uncovering patterns felt like discovering truths about the world in a rigorous way—which is exactly what drew me to data analysis in the first place.</p>
 
-                    <h3>// My Journey</h3>
-                    <p>
-                        My fascination with technology started early on, driven by a curiosity for the mechanics behind my favorite video games, like Minecraft and Mario Kart Wii. The ability to control pixels on a screen seemed magical, sparking a passion that led me to experiment with coding in high school. I created physics formula calculators in C++ (not perfect, but a start!) and even built my own PC.
-                    </p>
+    <h3>Student Performance Prediction Model</h3>
+    <p>For a database course project, I built a linear regression model to predict student grades based on their study effort hours. The dataset came from multiple CSV files representing student performance and counseling data, which I cleaned, transformed, and merged using pandas.</p>
 
-                    <h3>// Key Skills</h3>
-                    <ul>
-                        <li><strong>Languages:</strong> Python, JavaScript, Java</li>
-                        <li><strong>Frameworks & Libraries:</strong> Node.js, React, JavaFX</li>
-                        <li><strong>Tools:</strong> Draw.io, MySQL, Git</li>
-                    </ul>
+    <p>The data cleaning process was thorough—handling missing values, removing outliers (including one student whose performance pattern was statistically anomalous), and ensuring all values fell within acceptable ranges. Once the data was ready, I performed exploratory analysis and found something striking: the correlation between average effort hours and grades was 0.967—nearly perfect positive correlation.</p>
 
-                    <h3>// Current Projects</h3>
-                    <p>
-                        I'm currently developing an interactive platform that introduces students to web development basics through tutorials, quizzes, and progress tracking. I'm also working on this portfolio site to showcase my projects and skills.
-                    </p>
+    <p>I built both a general model predicting grades across all students and personalized models for individual students. The general model achieved an R² score of 0.94 with a mean squared error of just 0.385, meaning it explained 94% of the variance in student grades. The relationship was remarkably linear: on average, each additional hour of effort corresponded to a 6.34% increase in grade, with students typically reaching 100% after about 12.5 hours of work.</p>
 
-                    <h3>// A Bit About Me</h3>
-                    <p>
-                        Outside of coding, I enjoy staying active through weight training and long walks with my dog. I also love reading and writing about philosophy and human biology, especially topics around the endocrine system.
-                    </p>
+    <p>What made this project valuable wasn't just the strong predictive accuracy—it was learning the entire pipeline: data extraction and cleaning with pandas, exploratory data analysis to understand the data's structure, model building and evaluation, and interpreting results in a meaningful way. The fact that properly cleaned data could produce such accurate predictions was genuinely exciting to me.</p>
 
-                    <h3>// Let's Connect!</h3>
-                    <p>
-                        If you'd like to talk about web development, data analytics, or just connect, feel free to reach out!
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <h3>Text Document Analyzer</h3>
+    <p>I built a web application that performs comprehensive analysis on uploaded documents (PDF, DOCX, or TXT files), but what interests me most about this project is the backend—a Python NLP pipeline that extracts meaningful insights from text.</p>
+
+    <p>The backend combines multiple models working together: sentiment analysis to understand emotional tone and confidence, keyword extraction to identify the most important terms, topic modeling to uncover main themes, document summarization, and readability scoring. I built a text preprocessing system that cleans and normalizes documents before analysis, improving the quality of results across all downstream tasks.</p>
+
+    <p>What made this challenging was orchestrating multiple NLP models (using spaCy and Hugging Face transformers) into a cohesive pipeline where each component contributes to a comprehensive understanding of the document. The system needed to handle varied input quality, from clean professional writing to messy unstructured text, and still produce meaningful analysis.</p>
+
+    <p>This project taught me about building robust data pipelines, working with pre-trained NLP models, and the importance of preprocessing in getting reliable results. While the frontend provides a nice interface, the real work happens in how the backend processes and analyzes text data to extract actionable insights.</p>
+
+    <h3>MemoryKPR Image Classification</h3>
+    <p>This was a group project in my applied machine learning course where we built a CNN-based image classification system. My specific contribution focused on the tag matching component—I implemented a system that combined outputs from spaCy and Hugging Face models to match images with appropriate tags, calculating confidence scores as weighted averages of both models' predictions.</p>
+
+    <p>Working on a team project with real client requirements taught me about the ML pipeline process: data preprocessing, model training and evaluation, and the practical challenges of integrating multiple pre-trained models. It was my first hands-on experience with the full lifecycle of a machine learning project, from defining requirements with stakeholders to deploying a working system.</p>
+
+    <h2>Experience</h2>
+
+    <h3>Alberta Health Services - Data Analyst Intern</h3>
+    <p>During my internship at AHS, I worked primarily with Power BI and SQL Server Management Studio on healthcare data projects. Most of my time went into building a project management dashboard in Power BI, connected to Excel data sources, that tracked ongoing and expected projects including resource allocation, scope, and timelines.</p>
+
+    <p>This experience taught me practical skills I hadn't learned in coursework: how to present data effectively to stakeholders (choosing the right visualizations, formatting, spacing), the importance of clear and consistent communication with the people who'll actually use what you build, and the fundamentals of ETL processes in a real-world enterprise environment. Working with healthcare data also meant understanding the importance of data accuracy and attention to detail when the stakes are high.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ericnielsen2001@gmail.com">ericnielsen2001@gmail.com</a></p>
+    
+    <div class="contact-links">
+        <p><strong>Find me elsewhere:</strong></p>
+        <p>Code and projects: <a href="https://github.com/Ericn01" target="_blank">GitHub</a></p>
+        <p>Professional background: <a href="https://www.linkedin.com/in/eric-nielsen01/" target="_blank">LinkedIn</a></p>
+        <p>When I'm not analyzing data, I'm probably running: <a href="https://www.strava.com/athletes/23454462" target="_blank">Strava</a></p>
+    </div>
 </body>
 </html>
