@@ -1,10 +1,16 @@
 body {
-    font-family: Georgia, serif;
-    line-height: 1.6;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    color: #1e1e1e;
+    background-color: #f7f7f5;
+}
+
+.container {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    color: #333;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
 }
 
 /* NAVIGATION SECTION */
@@ -25,12 +31,14 @@ nav {
     padding: 0;
     margin: 0;
     font-size: 0.95em;
+    justify-content: center;
 }
 
 /* HEADER STYLES */
 h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+    font-size: 2.4em;
+    margin-bottom: 0.4em;
+    letter-spacing: -0.02em;
 }
 h2 {
     font-size: 1.5em;
@@ -38,16 +46,18 @@ h2 {
     margin-bottom: 0.5em;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.3em;
+
 }
+
 h3 {
-    font-size: 1.2em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em;
+    color: #2b2b2b;
 }
 
 /* PARAGRAPHS AND */
 p {
     margin-bottom: 1em;
+    max-width: 70ch;
 }
 a {
     color: #0066cc;
@@ -62,9 +72,64 @@ pre {
     overflow-x: auto;
     font-size: 0.9em;
     border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
+/* SECTION STYLING */
+.section {
+    padding: 32px 0;
+}
+.section:first-of-type {
+    padding-top: 0;
+}
+
+.section-heading {
+    font-size: 1.6em;
+    margin: 0 0 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3em;
+    padding-bottom: 0.4em;
+    color: #111;
+}
+
+/* BUTTON STYLING */
+button,
+input[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #1e1e1e;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* PROJECT CARD */
+.project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ececec;
+    margin-bottom: 20px;
+}
+.project-card:last-child {
+    margin-bottom: 0;
+}
+        
+
 /* CONTACT SECTION */
+
 .contact-links {
     margin-top: 1em;
 }
