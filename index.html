@@ -13,6 +13,24 @@
             padding: 0 20px;
             color: #333;
         }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 12px 0;
+            margin-bottom: 24px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95em;
+        }
         h1 {
             font-size: 2em;
             margin-bottom: 0.5em;
@@ -55,11 +73,21 @@
     </style>
 </head>
 <body>
+    <nav aria-label="Primary">
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <h1>Eric Nielsen</h1>
-    
+
+    <h2 id="about">About</h2>
     <p>I'm Eric Nielsen. I'm fascinated by what happens when you ask the right questions about data and pursue the answers rigorously. I work in Python for statistical analysis and machine learning, and I'm particularly drawn to problems involving human systems—psychology, neuroscience, pharmacology. I'm still building my skills, but what drives me is genuine curiosity about what statistical methods can reveal.</p>
 
-    <h2>Projects</h2>
+    <h2 id="projects">Projects</h2>
 
     <h3>Cardiovascular Disease Risk Factor Analysis</h3>
     <p>I wanted to understand which demographic and physiological factors most strongly associate with cardiovascular disease. Not just read about them in literature, but confirm them myself through rigorous statistical analysis. Working with a large Kaggle dataset, I performed exploratory data analysis, statistical hypothesis testing (t-tests and chi-square tests), and effect size calculations to identify the strongest risk factors.</p>
@@ -108,14 +136,14 @@ Rank   Variable             Type            Effect Size     P-Value
 
     <p>Working on a team project with real client requirements taught me about the ML pipeline process: data preprocessing, model training and evaluation, and the practical challenges of integrating multiple pre-trained models. It was my first hands-on experience with the full lifecycle of a machine learning project, from defining requirements with stakeholders to deploying a working system.</p>
 
-    <h2>Experience</h2>
+    <h2 id="experience">Experience</h2>
 
     <h3>Alberta Health Services - Data Analyst Intern</h3>
     <p>During my internship at AHS, I worked primarily with Power BI and SQL Server Management Studio on healthcare data projects. Most of my time went into building a project management dashboard in Power BI, connected to Excel data sources, that tracked ongoing and expected projects including resource allocation, scope, and timelines.</p>
 
     <p>This experience taught me practical skills I hadn't learned in coursework: how to present data effectively to stakeholders (choosing the right visualizations, formatting, spacing), the importance of clear and consistent communication with the people who'll actually use what you build, and the fundamentals of ETL processes in a real-world enterprise environment. Working with healthcare data also meant understanding the importance of data accuracy and attention to detail when the stakes are high.</p>
 
-    <h2>Education</h2>
+    <h2 id="education">Education</h2>
 
     <h3>Mount Royal University - Bachelor of Computer Information Systems</h3>
     <p><em>Fall 2020 - Winter 2024</em></p>
@@ -132,7 +160,7 @@ Rank   Variable             Type            Effect Size     P-Value
 
     <p><strong>Database Courses (Database I/II):</strong> Learned to write complex SQL queries, database normalization, database design, and data mining.</p>
 
-    <h2>Contact</h2>
+    <h2 id="contact">Contact</h2>
     <p>Email: <a href="mailto:ericnielsen2001@gmail.com">ericnielsen2001@gmail.com</a></p>
     
     <div class="contact-links">
