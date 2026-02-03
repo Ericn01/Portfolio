@@ -4,73 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Nielsen - Data Analyst</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
-        }
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            padding: 12px 0;
-            margin-bottom: 24px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 0.95em;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.3em;
-        }
-        h3 {
-            font-size: 1.2em;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            margin-bottom: 1em;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 15px;
-            overflow-x: auto;
-            font-size: 0.9em;
-            border: 1px solid #ddd;
-        }
-        .contact-links {
-            margin-top: 1em;
-        }
-        .contact-links p {
-            margin: 0.3em 0;
-        }
-    </style>
+    <link href="./styles.css" rel='stylesheet' type="text/css">
 </head>
 <body>
     <nav aria-label="Primary">
@@ -162,6 +96,18 @@ Rank   Variable             Type            Effect Size     P-Value
 
     <h2 id="contact">Contact</h2>
     <p>Email: <a href="mailto:ericnielsen2001@gmail.com">ericnielsen2001@gmail.com</a></p>
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="_replyto" type="email" autocomplete="email" required>
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
     
     <div class="contact-links">
         <p><strong>Find me elsewhere:</strong></p>
