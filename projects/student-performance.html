@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Student Performance Prediction Project </title>
-        <link href="../styles.css" rel='stylesheet' type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction Project</title>
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="page">
+        <nav class="site-nav" aria-label="Primary">
+            <div class="nav-inner container">
+                <a class="site-mark" href="../index.html">Eric Nielsen</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    </head>
-<body> 
-    <div class="container">
-        <h1>Student Performance Prediction ETL Pipeline</h1>
+        <main class="container">
+            <header class="section">
+                <p class="eyebrow">Project</p>
+                <h1>Student Performance Prediction ETL Pipeline</h1>
+                <div class="project-meta">
+                    <span><strong>Role:</strong> Lead Data Engineer and Analyst</span>
+                    <span><strong>Date:</strong> March 2024</span>
+                    <span><strong>Context:</strong> Database Systems and Predictive Analytics</span>
+                </div>
 
-        <div class="project-meta">
-            <span><strong>Role:</strong> Lead Data Engineer and Analyst</span>
-            <span><strong>Date:</strong> March 2024</span>
-            <span><strong>Context:</strong> Database Systems and Predictive Analytics</span>
-        </div>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">Scikit Learn</span>
+                    <span class="tech-badge">ETL</span>
+                </div>
+            </header>
 
-        <div class="tech-badges">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Pandas</span>
-            <span class="tech-badge">Scikit Learn</span>
-            <span class="tech-badge">ETL</span>
-        </div>
+            <section class="section">
+                <h2 class="section-subheading">Problem</h2>
+                <p>Academic data is often fragmented across multiple systems. The objective was to build a unified ETL pipeline capable of integrating academic, demographic, and departmental data to predict student performance.</p>
 
-        <h2 class="section-subheading">Problem</h2>
-        <p>
-        Academic data is often fragmented across multiple systems. The objective was to build a
-        unified ETL pipeline capable of integrating academic, demographic, and departmental data
-        to predict student performance.
-        </p>
+                <h2 class="section-subheading">Approach</h2>
+                <ul class="project-list">
+                    <li>Extracted data from multiple simulated enterprise sources</li>
+                    <li>Performed data validation, sparsity filtering, and outlier removal</li>
+                    <li>Merged datasets into a master analytical table using relational keys</li>
+                    <li>Trained both global and individualized regression models</li>
+                </ul>
 
-        <h2 class="section-subheading">Approach</h2>
-        <ul class="project-list">
-            <li>Extracted data from multiple simulated enterprise sources</li>
-            <li>Performed data validation, sparsity filtering, and outlier removal</li>
-            <li>Merged datasets into a master analytical table using relational keys</li>
-            <li>Trained both global and individualized regression models</li>
-        </ul>
-
-        <h2 class="section-subheading">Results</h2>
-        <ul class="project-list">
-            <li>R squared of 0.94 explaining student grade variance</li>
-            <li>Strong linear relationship between effort and outcome</li>
-            <li>Demonstrated feasibility of personalized academic forecasting</li>
-        </ul>
+                <h2 class="section-subheading">Results</h2>
+                <ul class="project-list">
+                    <li>R squared of 0.94 explaining student grade variance</li>
+                    <li>Strong linear relationship between effort and outcome</li>
+                    <li>Demonstrated feasibility of personalized academic forecasting</li>
+                </ul>
+            </section>
+        </main>
     </div>
-    </body>
+</body>
 </html>
