@@ -1,0 +1,95 @@
+{
+    "projects": [
+        {
+        "id": "memory-kpr",
+        "title": "MemoryKPR Hybrid Semantic Search and Media Governance",
+        "subtitle": "AI-Powered Image Retrieval with Built-in Content Safety",
+        "meta": {
+            "role": "",
+            "date": "2025",
+            "context": "University project in collaboration with MemoryKPR"
+        },
+        "techStack": [
+            "Python",
+            "Transformers",
+            "spaCy",
+            "",
+            "",
+            "Cosine Similarity"
+        ],
+        "overview": {
+            "problem": "Media platforms require intelligent search systems that understand natural language while maintaining strict content safety standards. Traditional keyword-based search fails to capture user intent, and manual content moderation doesn't scale.",
+            "solution": "Built a hybrid semantic search system combining statistical NLP and deep learning models, with automated NSFW filtering to create a safe, discoverable media platform."
+        },
+        "sections": [
+            {
+            "title": "Technical Architecture",
+            "type": "approach",
+            "content": [
+                {
+                "heading": "",
+                "description": ""
+                },
+                {
+                "heading": "Hybrid Embedding Ensemble",
+                "description": "Developed a weighted ensemble model combining spaCy (statistical NLP) and Hugging Face Transformers (contextual embeddings). The weighted sum balances the speed of traditional word vectors with the deep semantic understanding of attention-based models.",
+                "technical_note": "Used cosine similarity to map user text inputs into the same high-dimensional space as image labels, enabling 'fuzzy' searches that understand intent rather than exact keywords."
+                },
+                {
+                "heading": "Automated Content Filtering",
+                "description": ""
+                }
+            ]
+            },
+            {
+            "title": "Engineering Challenges",
+            "type": "challenges",
+            "content": [
+                {
+                "challenge": "Model Orchestration",
+                "solution": ""
+                },
+                {
+                "challenge": "Search Quality Optimization",
+                "solution": "Fine-tuned similarity thresholds to reduce false positives, ensuring the system only surfaced highly relevant imagery while maintaining recall."
+                },
+                {
+                "challenge": "Real-time Performance",
+                "solution": ""
+                }
+            ]
+            },
+            {
+            "title": "Impact & Results",
+            "type": "results",
+            "metrics": [
+                {
+                "label": "Manual Moderation Reduction",
+                "value": "",
+                "description": ""
+                },
+                {
+                "label": "Search Capability",
+                "value": "Natural Language",
+                "description": ""
+                },
+                {
+                "label": "Architecture",
+                "value": "",
+                "description": ""
+                }
+            ]
+            }
+        ],
+        "media": {
+            "demo_video": "",
+            "images": []
+        },
+        "links": {
+            "github": "https://github.com/HIMNIR/MemoryKPR_MRU_StudentProject/tree/main",
+            "demo": null,
+            "paper": null
+        }
+        }
+    ]
+}
