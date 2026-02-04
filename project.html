@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="css/project-detail.css">
 </head>
 <body>
+    <div class="page">
         <div class="grain-overlay"></div>
         
         <nav class="site-nav" aria-label="Primary">
-                <div class="nav-inner container">
-                    <a class="site-mark" href="index.html">Eric Nielsen</a>
-                    <ul class="nav-links">
-                        <li><a href="./index.html/#projects">Projects</a></li>
-                        <li><a href="./index.html/#about">About</a></li>
-                        <li><a href="./index.html/#experience">Experience</a></li>
-                        <li><a href="./index.html/#education">Education</a></li>
-                        <li><a href="./index.html/#contact">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="nav-inner container">
+                <a class="site-mark" href="index.html">Eric Nielsen</a>
+                <a href="/" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Back to Portfolio
+                </a>
+            </div>
         </nav>
 
 
@@ -97,8 +97,7 @@
             </a>
         </template>
 
-        <main id="project-container">
-        </main>
+        <main id="project-container" class="container project-detail"></main>
     </div>
 
     <script src="project-renderer.js"></script>

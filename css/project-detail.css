@@ -1,17 +1,27 @@
-/** 
+/**
 * Detailed project page styles.
 */
+
+/* Page Layout */
+.project-detail {
+    padding: var(--space-xl) 0 var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
 
 /* Back Navigation */
 .back-nav { padding: var(--space-l) 0; }
 .back-link { display: flex; align-items: center; gap: 8px; font-weight: 500; }
 
 /* Header & Meta */
-.project-header { margin-bottom: var(--space-2xl); animation: fadeInUp 0.6s ease; }
+.project-header { animation: fadeInUp 0.6s ease; }
 .project-title { font-size: clamp(2rem, 5vw, 3rem); }
+.project-subtitle { color: var(--muted); max-width: 60ch; }
 
 .project-meta {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-l);
     padding: var(--space-m);
     background: var(--accent-soft);
@@ -19,12 +29,38 @@
     margin: var(--space-l) 0;
 }
 
+.meta-item {
+    display: flex;
+    gap: var(--space-xs);
+    color: var(--muted);
+}
+
+.meta-label {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
 /* Detailed Content Items */
 .overview-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-l);
-    margin-bottom: var(--space-xl);
 }
 
 .approach-item, .challenge-item {
@@ -41,6 +77,12 @@
     padding: var(--space-s);
     border-left: 4px solid var(--accent);
     margin-top: var(--space-s);
+}
+
+.challenge-grid {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 /* Metrics */
@@ -60,8 +102,34 @@
 
 .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); display: block; }
 
+/* Links */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+}
+
 /* Responsive Detail View */
 @media (max-width: 768px) {
+    .project-detail { padding-top: var(--space-l); }
     .overview-grid { grid-template-columns: 1fr; }
     .project-meta { flex-direction: column; gap: 10px; }
 }

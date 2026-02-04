@@ -12,6 +12,13 @@
     backdrop-filter: blur(8px);
 }
 
+.site-mark {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+}
+
 .nav-inner {
     display: flex;
     justify-content: space-between;
