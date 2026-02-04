@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NextWord Project </title>
+    <link href="../styles.css" rel='stylesheet' type="text/css">
+
+</head>
+<body>
+    <h1>NextWord High Performance NLP Autocomplete</h1>
+
+    <div class="project-meta">
+        <span><strong>Role:</strong> Lead Developer</span>
+        <span><strong>Date:</strong> January 2026</span>
+        <span><strong>Context:</strong> NLP Engineering and Resource Optimization</span>
+    </div>
+
+    <div class="tech-badges">
+        <span class="tech-badge">R</span>
+        <span class="tech-badge">Shiny</span>
+        <span class="tech-badge">NLP</span>
+        <span class="tech-badge">data.table</span>
+        <span class="tech-badge">Cloud Computing</span>
+    </div>
+
+    <h2 class="section-subheading">Problem</h2>
+    <p>
+    Autocomplete systems with noticeable latency reduce user engagement. The goal of this project
+    was to design a next word prediction engine that feels instantaneous while operating within
+    strict memory limits imposed by free tier cloud hosting.
+    </p>
+
+    <h2 class="section-subheading">Technical Approach</h2>
+    <ul class="project-list">
+        <li>Implemented a 5 gram Stupid Backoff language model trained on multi million row corpora</li>
+        <li>Used keyed data.table structures with binary search for O(log n) lookup performance</li>
+        <li>Pruned low frequency n grams to reduce model size without meaningful accuracy loss</li>
+        <li>Stored model artifacts using fst format for fast multithreaded loading</li>
+    </ul>
+
+    <h2 class="section-subheading">Results</h2>
+    <ul class="project-list">
+        <li>Sub 100 millisecond prediction latency</li>
+        <li>Cold start time under 5 seconds on shinyapps.io</li>
+        <li>Successful deployment on zero budget infrastructure</li>
+    </ul>
+
+    <div class="project-links">
+        <a href="https://github.com/Ericn01/N-Gram-Text-Predictor">GitHub</a>
+        <a href="https://ericn01.shinyapps.io/Next-Word-N-Gram/">Live App</a>
+    </div>
+</body>
+</html>
