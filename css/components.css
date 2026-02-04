@@ -1,0 +1,76 @@
+/**
+* Reusable UI elements (navigation, buttons)
+*/
+
+/* Navigation */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 249, 246, 0.9);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-s) 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-m);
+    list-style: none;
+    margin: 0;
+}
+
+/* Buttons */
+.button, button, input[type="submit"] {
+    display: inline-flex;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button.ghost { background: transparent; color: var(--accent); }
+.button:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+
+/* Home Page Project Cards */
+.projects-grid {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-l);
+    transition: 0.3s;
+}
+
+.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+/* Forms */
+.contact-form {
+    background: var(--surface);
+    padding: var(--space-l);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: var(--space-m);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}

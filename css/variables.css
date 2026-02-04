@@ -1,0 +1,37 @@
+/**
+* Defining the base variables for the portfolio's styling.
+*/
+
+:root {
+    /* Colors */
+    --bg: #f5f3ee;
+    --bg-soft: #fbf9f6;
+    --surface: #ffffff;
+    --surface-elevated: #fcfcfb;
+    --ink: #1c1b1a;
+    --muted: #57524d;
+    --accent: #0f5b78;
+    --accent-soft: #e6f1f4;
+    --accent-dim: #b3d4e0;
+    --success: #00a86b;
+    --warning: #ffb800;
+    --border: #e3ded6;
+
+    /* Typography */
+    --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+    --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+
+    /* Shadows & Radius */
+    --shadow: 0 18px 40px rgba(20, 31, 40, 0.12);
+    --shadow-soft: 0 10px 24px rgba(20, 31, 40, 0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+
+    /* Spacing System */
+    --space-xs: 6px;
+    --space-s: 12px;
+    --space-m: 18px;
+    --space-l: 28px;
+    --space-xl: 44px;
+    --space-2xl: 64px;
+}
