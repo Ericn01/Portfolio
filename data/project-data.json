@@ -1,94 +1,201 @@
 {
     "projects": [
-        {
-            "id": "memory-kpr",
-            "title": "MemoryKPR Hybrid Semantic Search and Media Governance",
-            "subtitle": "AI-Powered Image Retrieval with Built-in Content Safety",
-            "meta": {
-                "role": "",
-                "date": "2025",
-                "context": "University project in collaboration with MemoryKPR"
+    {
+        "id": "next-word-predictor",
+        "title": "NextWord: High-Performance N-Gram Predictor",
+        "subtitle": "Coursera Capstone: Resource-Constrained NLP",
+        "meta": {
+            "role": "Lead Developer (End-to-End)",
+            "date": "January 10, 2026",
+            "context": "NLP Engineering / Resource-Constrained Optimization"
+        },
+        "techStack": ["R", "Shiny", "data.table", "Kaggle Cloud"],
+        "overview": {
+            "problem": "High-latency text prediction and RAM limitations on shinyapps.io prevented large-scale NLP models from booting or responding within acceptable thresholds.",
+            "solution": "Developed a 5-gram Stupid Backoff engine using a 0.38 sampling rate and .fst storage to balance predictive accuracy with a sub-5 second 'Cold Start' boot time."
+        },
+        "sections": [
+            {
+            "title": "Technical Architecture",
+            "type": "approach",
+            "content": [
+                {
+                "heading": "The Stupid Backoff Model",
+                "description": "Implemented a 5-gram window that recursively 'backs off' to smaller sequences when specific phrases are unseen.",
+                "technical_note": "Optimized using a 0.38 sampling rate to maintain a lean memory footprint."
+                }
+            ]
             },
-            "techStack": [
-                "Python",
-                "Transformers",
-                "spaCy",
-                "",
-                "",
-                "Cosine Similarity"
-            ],
+            {
+            "title": "Engineering Challenges",
+            "type": "challenges",
+            "content": [
+                {
+                "challenge": "RAM-Induced Cold Start (Shinyapps.io limits).",
+                "solution": "While Kaggle allowed for 30GB training, the resulting model was too large for production. Pivoted to locally trained models stored in .fst format for multi-threaded, high-speed reading."
+                }
+            ]
+            },
+            {
+            "title": "Impact & Results",
+            "type": "results",
+            "metrics": [
+                {
+                "label": "Boot Time",
+                "value": "<5s",
+                "description": "Reduced application initialization time through efficient table storage and pruning."
+                }
+            ]
+            }
+        ],
+        "links": {
+            "github": "https://github.com/Ericn01/N-Gram-Text-Predictor",
+            "demo": "https://ericn01.shinyapps.io/Next-Word-N-Gram/"
+        }
+    }, 
+    {
+        "id": "exercise-quality-analytics",
+        "title": "Wearable Sensor Analytics",
+        "subtitle": "Classifying Movement Quality with IoT Data",
+        "meta": {
+            "role": "Lead Data Analyst",
+            "date": "January 5, 2026",
+            "context": "Practical Machine Learning (IoT / Motion Analysis)"
+        },
+        "techStack": ["R", "Caret", "Random Forest", "ggplot2"],
+        "overview": {
+            "problem": "Identifying specific biomechanical errors in real-time requires isolating 'physics-based' signals from noisy high-frequency sensor data across 4 body locations.",
+            "solution": "Built a Random Forest classifier to detect 4 distinct form errors (Class B-E) using 19,622 observations from belt, arm, and dumbbell sensors."
+        },
+        "sections": [
+            {
+            "title": "Kinetic Chain Analysis",
+            "type": "approach",
+            "content": [
+                {
+                "heading": "Multimodal Sensor Fusion",
+                "description": "Utilized data from belt, arm, and dumbbell sensors to classify movements like 'throwing hips' (Class E) or 'half-way curls' (Class C/D).",
+                "technical_note": "Identified y_magnet and z_magnet on the dumbbell as the primary indicators for range-of-motion completion."
+                },
+                {
+                "heading": "Gini Importance Validation",
+                "description": "Determined that belt sensors provided the most significant signal for identifying core/hip stability errors.",
+                "technical_note": "Eliminated redundant forearm sensors to streamline future hardware requirements."
+                }
+            ]
+            },
+            {
+            "title": "Classification Accuracy",
+            "type": "results",
+            "metrics": [
+                {
+                "label": "Class A-E Accuracy",
+                "value": ">99%",
+                "description": "Near-perfect identification of specific errors (e.g., throwing elbows vs. hips)."
+                }
+            ]
+            }
+        ],
+        "links": {
+            "github": "https://github.com/Ericn01/Exercise-Quality-Prediction",
+            "demo": "https://ericn01.github.io/Exercise-Quality-Prediction"
+        }
+    },
+    {
+        "id": "student-performance-etl",
+        "title": "Academic Performance ETL & Regression",
+        "subtitle": "Predictive Success Modeling via Unified Data Streams",
+        "meta": {
+            "role": "Lead Data Analyst",
+            "date": "April 2024",
+            "context": "Database II (MRU) / Synthetic Data Research"
+        },
+        "techStack": ["Python", "Pandas", "Scikit-Learn", "Matplotlib"],
+        "overview": {
+            "problem": "Analyzing student success often requires merging fragmented relational data while identifying which specific behaviors (e.g., effort vs. demographics) actually drive outcomes.",
+            "solution": "Built an ETL pipeline to unify CSV data and developed a linear regression model identifying study hours as the primary predictor of success (R² = 0.94)."
+        },
+        "sections": [
+            {
+            "title": "ETL & Data Integrity",
+            "type": "approach",
+            "content": [
+                {
+                "heading": "Constraint-Based Cleaning",
+                "description": "Implemented data validation rules including date ranges (post-1900), grade boundaries [0-100], and effort hour non-negativity.",
+                "technical_note": "Utilized Pandas .dropna() and .groupby() for high-integrity dataset aggregation."
+                }
+            ]
+            },
+            {
+            "title": "Predictive Modeling",
+            "type": "results",
+            "metrics": [
+                {
+                "label": "R² Score",
+                "value": "0.94",
+                "description": "Demonstrated that effort hours explain nearly all variance in the synthetic dataset."
+                },
+                {
+                "label": "Success Rate",
+                "value": "6.34% / hr",
+                "description": "Calculated the linear grade increase per additional hour of effort."
+                }
+            ]
+            }
+        ],
+        "links": { "github": null, "demo": null }
+        },
+        {
+            "id": "memory-kpr-search",
+            "title": "Memory KPR: Hybrid Semantic Search",
+            "subtitle": "Multimodal 'Smart Stories' Image Retrieval",
+            "meta": {
+                "role": "NLP Architect (Team Project)",
+                "date": "April 2024",
+                "context": "Applied ML / Industry Collaboration with memoryKPR"
+            },
+            "techStack": ["spaCy", "SentenceTransformers", "num2words", "Pandas", "AWS CNN"],
             "overview": {
-                "problem": "Media platforms require intelligent search systems that understand natural language while maintaining strict content safety standards. Traditional keyword-based search fails to capture user intent, and manual content moderation doesn't scale.",
-                "solution": "Built a hybrid semantic search system combining statistical NLP and deep learning models, with automated NSFW filtering to create a safe, discoverable media platform."
+                "problem": "Traditional keyword search fails to capture the 'story' behind an image, and AWS-generated labels often require normalization to be useful for semantic models.",
+                "solution": "Developed a weighted ensemble search using spaCy (65%) and SentenceTransformers (35%) to map natural language prompts to images with a 40% similarity 'Safety-First' threshold."
             },
             "sections": [
                 {
-                "title": "Technical Architecture",
+                "title": "NLP Pipeline & Preprocessing",
                 "type": "approach",
                 "content": [
                     {
-                    "heading": "",
-                    "description": ""
+                    "heading": "Label Normalization",
+                    "description": "Converted numerical instance counts to word forms (e.g., '1' to 'one') using num2words and applied pluralization logic to labels.",
+                    "technical_note": "Crucial for 'BERT uncased' models to understand quantity as a semantic concept rather than a raw integer."
                     },
                     {
-                    "heading": "Hybrid Embedding Ensemble",
-                    "description": "Developed a weighted ensemble model combining spaCy (statistical NLP) and Hugging Face Transformers (contextual embeddings). The weighted sum balances the speed of traditional word vectors with the deep semantic understanding of attention-based models.",
-                    "technical_note": "Used cosine similarity to map user text inputs into the same high-dimensional space as image labels, enabling 'fuzzy' searches that understand intent rather than exact keywords."
-                    },
-                    {
-                    "heading": "Automated Content Filtering",
-                    "description": ""
+                    "heading": "Weighted Ensemble Model",
+                    "description": "Balanced the speed of spaCy's statistical vectors with the deep context of the 'all-MiniLM-L6-v2' transformer.",
+                    "technical_note": "A 65/35 weight split was implemented to prioritize robust similarity across diverse label types."
                     }
                 ]
                 },
                 {
-                "title": "Engineering Challenges",
-                "type": "challenges",
-                "content": [
-                    {
-                    "challenge": "Model Orchestration",
-                    "solution": ""
-                    },
-                    {
-                    "challenge": "Search Quality Optimization",
-                    "solution": "Fine-tuned similarity thresholds to reduce false positives, ensuring the system only surfaced highly relevant imagery while maintaining recall."
-                    },
-                    {
-                    "challenge": "Real-time Performance",
-                    "solution": ""
-                    }
-                ]
-                },
-                {
-                "title": "Impact & Results",
+                "title": "Governance & Quality",
                 "type": "results",
                 "metrics": [
                     {
-                    "label": "Manual Moderation Reduction",
-                    "value": "",
-                    "description": ""
+                    "label": "Confidence Gate",
+                    "value": ">70%",
+                    "description": "Only utilized AWS CNN labels with high confidence scores to reduce noise."
                     },
                     {
-                    "label": "Search Capability",
-                    "value": "Natural Language",
-                    "description": ""
-                    },
-                    {
-                    "label": "Architecture",
-                    "value": "",
-                    "description": ""
+                    "label": "Warning Threshold",
+                    "value": "0.40",
+                    "description": "Implemented a similarity floor to flag semantically unrelated content for moderation."
                     }
                 ]
                 }
             ],
-            "media": {
-                "demo_video": "",
-                "images": []
-            },
             "links": {
-                "github": "https://github.com/HIMNIR/MemoryKPR_MRU_StudentProject/tree/main",
-                "demo": null,
-                "paper": null
+                "github": "https://github.com/HIMNIR/MemoryKPR_MRU_StudentProject/tree/main"
             }
         }
     ]
