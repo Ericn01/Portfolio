@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <nav class="back-nav">
+        <a href="/" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Back to Portfolio
+        </a>
+    </nav>
+
+    <main id="project-container">
+
+        <!-- Header Structure -->
+        <template id="tpl-header">
+            <header class="project-header">
+                <p class="eyebrow">Project</p>
+                <h1 class="project-title"></h1>
+                <p class="project-subtitle"></p>
+                <div class="project-meta"></div>
+                <div class="tech-stack"></div>
+            </header>
+        </template>
+
+        <!-- -->
+        <template id="tpl-meta-item">
+            <div class="meta-item">
+                <span class="meta-label"></span>
+                <span class="meta-value"></span>
+            </div>
+        </template>
+
+        <!-- Project Overview Structure -->
+        <template id="tpl-overview">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>Problem</h3>
+                    <p class="problem-text"></p>
+                </div>
+                <div class="overview-card">
+                    <h3>Solution</h3>
+                    <p class="solution-text"></p>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-section">
+            <section class="section">
+                <h2 class="section-title"></h2>
+                <div class="section-content"></div>
+            </section>
+        </template>
+
+        <template id="tpl-approach-item">
+            <div class="approach-item">
+                <h3 class="approach-heading"></h3>
+                <p class="approach-description"></p>
+                <div class="technical-note"></div>
+            </div>
+        </template>
+
+        <template id="tpl-challenge-item">
+            <div class="challenge-item">
+                <div class="challenge-label">Challenge</div>
+                <h3 class="challenge-title"></h3>
+                <div class="solution-label">Solution</div>
+                <p class="solution-text"></p>
+            </div>
+        </template>
+
+        <template id="tpl-metric-card">
+            <div class="metric-card">
+                <span class="metric-value"></span>
+                <span class="metric-label"></span>
+                <p class="metric-description"></p>
+            </div>
+        </template>
+
+        <template id="tpl-link">
+            <a href="" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span class="link-icon"></span>
+                <span class="link-text"></span>
+            </a>
+        </template>
+    </main>
+
+    <script src="project-renderer.js"></script>
+    <script>
+        // Get project ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id') || 'memory-kpr';
+        
+        // Load and render project
+        fetch('data/projects-data.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.projects.find(p => p.id === projectId);
+                if (project) {
+                    renderProject(project);
+                } else {
+                    document.getElementById('project-container').innerHTML = 
+                        '<div class="error">Project not found</div>';
+                }
+            })
+            .catch(error => {
+                console.error('Error loading project:', error);
+                document.getElementById('project-container').innerHTML = 
+                    '<div class="error">Failed to load project data</div>';
+            });
+    </script>
+</body>
+</html>
