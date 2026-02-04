@@ -37,7 +37,7 @@ function renderProject(project) {
 function createHeader(project) {
     const { title, subtitle, meta, techStack } = project;
     const fragment = cloneTemplate('tpl-header');
-
+    console.log(fragment)
     fragment.querySelector('.project-title').textContent = title;
     
     const subtitleEl = fragment.querySelector('.project-subtitle');

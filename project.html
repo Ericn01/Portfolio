@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
-    <link rel="stylesheet" href="project-styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="grain-overlay"></div>
-    
-    <nav class="back-nav">
-        <a href="/" class="back-link">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            Back to Portfolio
-        </a>
-    </nav>
+        <div class="grain-overlay"></div>
+        
+        <nav class="site-nav" aria-label="Primary">
+                <div class="nav-inner container">
+                    <a class="site-mark" href="index.html">Eric Nielsen</a>
+                    <ul class="nav-links">
+                        <li><a href="./index.html/#projects">Projects</a></li>
+                        <li><a href="./index.html/#about">About</a></li>
+                        <li><a href="./index.html/#experience">Experience</a></li>
+                        <li><a href="./index.html/#education">Education</a></li>
+                        <li><a href="./index.html/#contact">Contact</a></li>
+                    </ul>
+                </div>
+        </nav>
 
-    <main id="project-container">
 
         <!-- Header Structure -->
         <template id="tpl-header">
@@ -91,7 +94,10 @@
                 <span class="link-text"></span>
             </a>
         </template>
-    </main>
+
+        <main id="project-container">
+        </main>
+    </div>
 
     <script src="project-renderer.js"></script>
     <script>
@@ -100,11 +106,12 @@
         const projectId = urlParams.get('id') || 'memory-kpr';
         
         // Load and render project
-        fetch('data/projects-data.json')
+        fetch('./data/project-data.json')
             .then(response => response.json())
             .then(data => {
                 const project = data.projects.find(p => p.id === projectId);
                 if (project) {
+                    console.log(project)
                     renderProject(project);
                 } else {
                     document.getElementById('project-container').innerHTML = 
